@@ -28,13 +28,13 @@ test.describe('Alik-family-tree E2E Tests', () => {
 		await expect(searchInput).toBeVisible();
 
 		// Check person cards exist
-		const personItems = page.locator('.directory-card, .person-row, tr, [data-person-id]');
+		const personItems = page.locator('.person-card');
 		await expect(personItems.first()).toBeVisible();
 
 		// Search for known family name
 		await searchInput.fill('Запольнов');
 		await page.waitForTimeout(150);
-		const filteredItems = page.locator('.directory-card, .person-row, tr, [data-person-id]');
+		const filteredItems = page.locator('.person-card');
 		await expect(filteredItems.first()).toBeVisible();
 	});
 
@@ -46,7 +46,7 @@ test.describe('Alik-family-tree E2E Tests', () => {
 		await expect(heading).toContainText(/Статистика/i);
 
 		// Demographics cards/charts
-		const statsContent = page.locator('.stats-page-container, .stats-header');
+		const statsContent = page.locator('.stats-page-container');
 		await expect(statsContent).toBeVisible();
 	});
 
