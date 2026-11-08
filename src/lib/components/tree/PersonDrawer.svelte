@@ -76,6 +76,11 @@
 							Дівоче прізвище: <strong>{person.maidenName}</strong>
 						</div>
 					{/if}
+					{#if person.dates}
+						<div class="person-dates-badge">
+							🗓️ Роки життя: <strong>{person.dates}</strong>
+						</div>
+					{/if}
 					{#if person.fullName !== person.name}
 						<div class="person-alt-name">{person.fullName}</div>
 					{/if}
@@ -357,6 +362,12 @@
 		font-size: 13px;
 		color: var(--color-accent);
 		margin-bottom: 2px;
+	}
+
+	.person-dates-badge {
+		font-size: 12px;
+		color: var(--color-text-muted);
+		margin-bottom: 3px;
 	}
 
 	.person-alt-name {

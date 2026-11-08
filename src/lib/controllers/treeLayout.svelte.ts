@@ -58,8 +58,8 @@ export function createOrthogonalPath(
 }
 
 export class TreeLayoutController {
-	readonly CARD_WIDTH = 126;
-	readonly CARD_HEIGHT = 62;
+	readonly CARD_WIDTH = 132;
+	readonly CARD_HEIGHT = 66;
 	readonly UNION_WIDTH = 50;
 	readonly UNION_HEIGHT = 28;
 

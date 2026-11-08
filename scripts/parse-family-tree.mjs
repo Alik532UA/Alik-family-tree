@@ -70,12 +70,15 @@ function cleanHtml(raw) {
 	if (!raw) return '';
 	return raw
 		.replace(/<br\s*\/?>/gi, '\n')
-		.replace(/&nbsp;/g, ' ')
-		.replace(/&amp;/g, '&')
-		.replace(/&lt;/g, '<')
-		.replace(/&gt;/g, '>')
+		.replace(/&amp;nbsp;/gi, ' ')
+		.replace(/&nbsp;/gi, ' ')
+		.replace(/&amp;/gi, '&')
+		.replace(/&lt;/gi, '<')
+		.replace(/&gt;/gi, '>')
+		.replace(/&quot;/gi, '"')
+		.replace(/&#39;/gi, "'")
 		.replace(/<[^>]+>/g, ' ')
-		.replace(/[ \t]+/g, ' ')
+		.replace(/[\u00A0\s]+/g, ' ')
 		.trim();
 }
 
@@ -149,23 +152,24 @@ for (const raw of rawPeople) {
 	const lines = rawName.split('\n').map((l) => l.trim()).filter(Boolean);
 	const flatName = lines.join(' ').replace(/\s+/g, ' ').trim();
 
-	let maidenName = undefined;
-	let currentName = flatName;
-
-	// Extract dates if present (e.g. 1938.01.31 - 1995.10.18 or 1918 - 1979)
+	// Extract dates first so they do not contaminate maiden or last names
 	let dates = undefined;
 	const dateRegex = /(\d{4}(?:\.\d{2}\.\d{2})?(?:\s*[-–—]\s*\d{4}(?:\.\d{2}\.\d{2})?)?)/;
 	const dateMatch = flatName.match(dateRegex);
+	let nameClean = flatName;
 	if (dateMatch && dateMatch[1]) {
 		dates = dateMatch[1].replace(/[-–—]/g, '–').replace(/\s+/g, ' ').trim();
-		currentName = currentName.replace(dateRegex, '').replace(/\s+/g, ' ').trim();
+		nameClean = flatName.replace(dateRegex, '').replace(/\s+/g, ' ').trim();
 	}
 
-	if (flatName.includes('→')) {
-		const parts = flatName.split('→').map((p) => p.trim());
+	let maidenName = undefined;
+	let currentName = nameClean;
+
+	if (nameClean.includes('→')) {
+		const parts = nameClean.split('→').map((p) => p.trim());
 		const beforeArrow = parts[0] || '';
 		const afterArrow = parts[1] || '';
-		const beforeTokens = beforeArrow.split(' ');
+		const beforeTokens = beforeArrow.split(' ').filter(Boolean);
 		maidenName = beforeTokens[beforeTokens.length - 1];
 		currentName = beforeTokens.slice(0, -1).join(' ') + ' ' + afterArrow;
 	}

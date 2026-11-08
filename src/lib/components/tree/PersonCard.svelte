@@ -70,11 +70,11 @@
 		{#if person.middleName}
 			<div class="name-line middle-name">{person.middleName}</div>
 		{/if}
-		<div class="name-line last-name">
+		<div class="name-line last-name" title="{person.maidenName ? `${person.maidenName} → ` : ''}{person.lastName}">
 			{#if person.maidenName}
 				<span class="maiden-part">{person.maidenName} → </span>
 			{/if}
-			{person.lastName}
+			<span class="last-name-part">{person.lastName}</span>
 		</div>
 
 		{#if person.dates}
@@ -92,8 +92,8 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		padding: 4px 6px;
-		border-radius: 8px;
+		padding: 3px 5px;
+		border-radius: 9px;
 		border: 2px solid;
 		cursor: pointer;
 		user-select: none;
@@ -149,28 +149,29 @@
 
 	.first-name {
 		font-weight: 700;
+		font-size: 11.5px;
 	}
 
 	.middle-name {
 		font-weight: 500;
-		font-size: 10.5px;
+		font-size: 10px;
 		opacity: 0.95;
 	}
 
 	.last-name {
 		font-weight: 600;
-		font-size: 11px;
+		font-size: 10px;
 	}
 
 	.maiden-part {
-		font-size: 9.5px;
-		opacity: 0.8;
+		font-size: 9px;
+		opacity: 0.85;
 	}
 
 	.dates-line {
 		font-size: 9px;
 		font-weight: 600;
-		opacity: 0.75;
+		opacity: 0.8;
 		margin-top: 1px;
 		letter-spacing: -0.02em;
 	}
