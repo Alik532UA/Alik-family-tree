@@ -72,22 +72,20 @@ export class TreeViewportController {
 		}
 	}
 
-	centerOnPerson(id: string, smooth = true): void {
+	centerOnPerson(id: string, _smooth = true): void {
 		const person = peopleById.get(id);
 		if (!person) return;
 
 		const targetScale = Math.max(this.scale, 0.85);
-		const targetX = this.containerWidth / 2 - (person.svgCoords.x + person.svgCoords.width / 2) * targetScale;
+		// On wider screens where PersonDrawer is open on the right (~380px),
+		// offset the center to the left so the person sits right in the middle of the unobstructed workspace
+		const visibleWidth = this.containerWidth > 860 ? this.containerWidth - 380 : this.containerWidth;
+		const targetX = visibleWidth / 2 - (person.svgCoords.x + person.svgCoords.width / 2) * targetScale;
 		const targetY = this.containerHeight / 2 - (person.svgCoords.y + person.svgCoords.height / 2) * targetScale;
 
 		this.scale = targetScale;
-		if (smooth && browser) {
-			this.panX = targetX;
-			this.panY = targetY;
-		} else {
-			this.panX = targetX;
-			this.panY = targetY;
-		}
+		this.panX = targetX;
+		this.panY = targetY;
 	}
 
 	centerOnCoords(canvasX: number, canvasY: number): void {

@@ -188,6 +188,12 @@
 						class="union-rect"
 					/>
 
+					<!-- Subtle interlocking rings glyph in center of pill -->
+					<g class="union-glyph-group" transform="translate({union.svgCoords.width / 2}, {union.svgCoords.height / 2})">
+						<circle cx="-4" cy="0" r="4.5" class="union-ring-glyph" />
+						<circle cx="4" cy="0" r="4.5" class="union-ring-glyph" />
+					</g>
+
 					{#if activeUnionTooltip?.id === union.id}
 						<!-- Tooltip floating above union pill -->
 						<g class="union-tooltip-group" transform="translate({union.svgCoords.width / 2}, -16)">
@@ -259,80 +265,80 @@
 					<!-- 1. Selected Person Focus Ring & Badge -->
 					{#if isSelected}
 						<rect
-							x="-5"
-							y="-5"
-							width={person.svgCoords.width + 10}
-							height={person.svgCoords.height + 10}
-							rx="14"
-							ry="14"
+							x="-4"
+							y="-4"
+							width={person.svgCoords.width + 8}
+							height={person.svgCoords.height + 8}
+							rx="12"
+							ry="12"
 							class="halo-ring ring-selected"
 						/>
-						<g transform="translate(6, -10)">
-							<rect width="56" height="18" rx="4" class="badge-bg badge-bg-selected" />
-							<text x="28" y="13" class="badge-text" text-anchor="middle">Обрано</text>
+						<g transform="translate(8, -15)">
+							<rect width="60" height="18" rx="9" class="badge-bg badge-bg-selected" />
+							<text x="30" y="12.5" class="badge-text" text-anchor="middle">Обрано</text>
 						</g>
 					{/if}
 
 					<!-- 2. Parents Focus Ring & Badge -->
 					{#if isParent && !isSelected}
 						<rect
-							x="-4"
-							y="-4"
-							width={person.svgCoords.width + 8}
-							height={person.svgCoords.height + 8}
-							rx="13"
-							ry="13"
+							x="-3.5"
+							y="-3.5"
+							width={person.svgCoords.width + 7}
+							height={person.svgCoords.height + 7}
+							rx="11"
+							ry="11"
 							class="halo-ring ring-parent"
 						/>
-						<g transform="translate(6, -10)">
-							<rect width="68" height="18" rx="4" class="badge-bg badge-bg-parent" />
-							<text x="34" y="13" class="badge-text" text-anchor="middle">Батько/Мати</text>
+						<g transform="translate(8, -15)">
+							<rect width="78" height="18" rx="9" class="badge-bg badge-bg-parent" />
+							<text x="39" y="12.5" class="badge-text" text-anchor="middle">Батько/Мати</text>
 						</g>
 					{/if}
 
 					<!-- 3. Spouse Focus Ring & Badge -->
 					{#if isSpouse && !isSelected}
 						<rect
-							x="-4"
-							y="-4"
-							width={person.svgCoords.width + 8}
-							height={person.svgCoords.height + 8}
-							rx="13"
-							ry="13"
+							x="-3.5"
+							y="-3.5"
+							width={person.svgCoords.width + 7}
+							height={person.svgCoords.height + 7}
+							rx="11"
+							ry="11"
 							class="halo-ring ring-spouse"
 						/>
-						<g transform="translate(6, -10)">
-							<rect width="66" height="18" rx="4" class="badge-bg badge-bg-spouse" />
-							<text x="33" y="13" class="badge-text" text-anchor="middle">Подружжя</text>
+						<g transform="translate(8, -15)">
+							<rect width="70" height="18" rx="9" class="badge-bg badge-bg-spouse" />
+							<text x="35" y="12.5" class="badge-text" text-anchor="middle">Подружжя</text>
 						</g>
 					{/if}
 
 					<!-- 4. Child Focus Ring & Badge -->
 					{#if isChild && !isSelected}
 						<rect
-							x="-4"
-							y="-4"
-							width={person.svgCoords.width + 8}
-							height={person.svgCoords.height + 8}
-							rx="13"
-							ry="13"
+							x="-3.5"
+							y="-3.5"
+							width={person.svgCoords.width + 7}
+							height={person.svgCoords.height + 7}
+							rx="11"
+							ry="11"
 							class="halo-ring ring-child"
 						/>
-						<g transform="translate(6, -10)">
-							<rect width="54" height="18" rx="4" class="badge-bg badge-bg-child" />
-							<text x="27" y="13" class="badge-text" text-anchor="middle">Дитина</text>
+						<g transform="translate(8, -15)">
+							<rect width="56" height="18" rx="9" class="badge-bg badge-bg-child" />
+							<text x="28" y="12.5" class="badge-text" text-anchor="middle">Дитина</text>
 						</g>
 					{/if}
 
 					<!-- 5. Search Highlight Ring -->
 					{#if isHighlighted && !isSelected}
 						<rect
-							x="-5"
-							y="-5"
-							width={person.svgCoords.width + 10}
-							height={person.svgCoords.height + 10}
-							rx="14"
-							ry="14"
+							x="-4"
+							y="-4"
+							width={person.svgCoords.width + 8}
+							height={person.svgCoords.height + 8}
+							rx="12"
+							ry="12"
 							class="halo-ring ring-search"
 						/>
 					{/if}
@@ -378,7 +384,7 @@
 	}
 
 	.tree-svg-image.dimmed {
-		opacity: 0.65;
+		opacity: 0.72;
 		filter: saturate(0.85);
 	}
 
@@ -389,18 +395,37 @@
 		pointer-events: none;
 	}
 
+	.tree-interactive-overlay,
+	.tree-interactive-overlay * {
+		outline: none !important;
+		-webkit-tap-highlight-color: transparent;
+	}
+
 	.person-hotspot {
 		pointer-events: all;
 		cursor: pointer;
-		transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease, filter 0.3s ease;
+		outline: none !important;
+	}
+
+	.person-hotspot:focus,
+	.person-hotspot:focus-visible {
+		outline: none !important;
+	}
+
+	.person-hotspot:focus-visible .hotspot-rect {
+		stroke: #2563eb;
+		stroke-width: 2;
 	}
 
 	.person-hotspot.dimmed {
-		opacity: 0.28;
+		opacity: 0.42;
+		filter: saturate(0.7);
 	}
 
 	.person-hotspot.dimmed:hover {
 		opacity: 1;
+		filter: none;
 	}
 
 	.hotspot-rect {
@@ -423,48 +448,52 @@
 
 	.ring-selected {
 		stroke: #2563eb;
-		stroke-width: 3.5;
-		filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.65));
-		animation: pulse-ring 2.5s infinite ease-in-out;
+		stroke-width: 3;
+		filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.55));
+		animation: pulse-ring 2.8s infinite ease-in-out;
 	}
 
 	.ring-parent {
 		stroke: #0284c7;
-		stroke-width: 3;
-		filter: drop-shadow(0 0 8px rgba(2, 132, 199, 0.5));
+		stroke-width: 2.8;
+		filter: drop-shadow(0 0 8px rgba(2, 132, 199, 0.45));
 	}
 
 	.ring-spouse {
-		stroke: #d946ef;
-		stroke-width: 3;
-		filter: drop-shadow(0 0 8px rgba(217, 70, 239, 0.5));
+		stroke: #c026d3;
+		stroke-width: 2.8;
+		filter: drop-shadow(0 0 8px rgba(192, 38, 211, 0.45));
 	}
 
 	.ring-child {
-		stroke: #10b981;
-		stroke-width: 3;
-		filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));
+		stroke: #059669;
+		stroke-width: 2.8;
+		filter: drop-shadow(0 0 8px rgba(5, 150, 105, 0.45));
 	}
 
 	.ring-search {
 		stroke: #eab308;
-		stroke-width: 4;
+		stroke-width: 3.5;
 		filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.6));
 	}
 
 	/* Role badges in SVG */
 	.badge-bg {
 		pointer-events: none;
+		stroke: rgba(255, 255, 255, 0.45);
+		stroke-width: 1;
+		filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.22));
 	}
 	.badge-bg-selected { fill: #2563eb; }
 	.badge-bg-parent { fill: #0284c7; }
-	.badge-bg-spouse { fill: #d946ef; }
-	.badge-bg-child { fill: #10b981; }
+	.badge-bg-spouse { fill: #c026d3; }
+	.badge-bg-child { fill: #059669; }
 
 	.badge-text {
 		font-size: 10px;
 		font-family: inherit;
 		font-weight: 700;
+		letter-spacing: 0.02em;
 		fill: #ffffff;
 		pointer-events: none;
 	}
@@ -484,6 +513,12 @@
 	.union-hotspot {
 		pointer-events: all;
 		cursor: pointer;
+		outline: none !important;
+	}
+
+	.union-hotspot:focus,
+	.union-hotspot:focus-visible {
+		outline: none !important;
 	}
 
 	.union-rect {
@@ -496,6 +531,23 @@
 	.union-hotspot:hover .union-rect {
 		stroke: #ca8a04;
 		stroke-width: 2.5;
+	}
+
+	.union-glyph-group {
+		pointer-events: none;
+	}
+
+	.union-ring-glyph {
+		fill: none;
+		stroke: #b45309;
+		stroke-width: 1.4;
+		opacity: 0.65;
+		transition: opacity 0.15s ease, stroke 0.15s ease;
+	}
+
+	.union-hotspot:hover .union-ring-glyph {
+		stroke: #78350f;
+		opacity: 1;
 	}
 
 	.union-tooltip-group {
