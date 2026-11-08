@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<link rel="icon" href="%sveltekit.assets%/favicon/favicon.svg" type="image/svg+xml" />
+		%sveltekit.head%
+		<script>
+			// Перший кадр теми (UI-UX § 1.1): ключ і схеми тем — з мета-тегу, який макет рендерить із colorScheme.ts
+			(function () {
+				var meta = document.querySelector('meta[name="theme-first-frame"]');
+				if (!meta) return;
+				try {
+					var data = JSON.parse(meta.getAttribute('content'));
+					var saved = localStorage.getItem(data.key);
+					if (saved && Object.prototype.hasOwnProperty.call(data.scheme, saved)) {
+						document.documentElement.setAttribute('data-theme', saved);
+						var colorScheme = document.querySelector('meta[name="color-scheme"]');
+						if (colorScheme) colorScheme.setAttribute('content', data.scheme[saved]);
+					}
+				} catch (e) {}
+			})();
+		</script>
+		<style>
+			html.has-custom-scrollbar {
+				scrollbar-width: none;
+			}
+			html.has-custom-scrollbar::-webkit-scrollbar {
+				display: none;
+			}
+			html.no-fullscreen .fullscreen-btn {
+				display: none;
+			}
+		</style>
+		<script>
+			// Перший кадр смуги (SCROLLBAR § 8.2)
+			(function () {
+				var meta = document.querySelector('meta[name="scrollbar-first-frame"]');
+				if (!meta) return;
+				try {
+					var data = JSON.parse(meta.getAttribute('content'));
+					var mode = localStorage.getItem(data.key);
+					var paints = Object.prototype.hasOwnProperty.call(data.paints, mode) ? data.paints[mode] : data.paints[data.fallback];
+					var canPaint = matchMedia(data.queries.fine).matches && !matchMedia(data.queries.forced).matches;
+					if (canPaint && (paints === 'always' || (paints === 'wide' && matchMedia(data.queries.wide).matches))) {
+						document.documentElement.classList.add('has-custom-scrollbar');
+					}
+				} catch (e) {}
+			})();
+		</script>
+		<script>
+			// Перший кадр кнопки «на весь екран» (FULLSCREEN-INSTALL § 3)
+			(function () {
+				try {
+					var can = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+					var standalone = navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches === true;
+					if (!can && standalone) document.documentElement.classList.add('no-fullscreen');
+				} catch (e) {}
+			})();
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
+

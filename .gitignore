@@ -1,0 +1,21 @@
+# SvelteKit & Vite
+.svelte-kit/
+build/
+dist/
+node_modules/
+
+# Logs & temp
+*.log
+.DS_Store
+Thumbs.db
+
+# Test reports
+playwright-report/
+test-results/
+coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
