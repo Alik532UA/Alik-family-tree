@@ -18,7 +18,7 @@ export interface TreeLine {
 	pathD: string;
 }
 
-// Generate smooth rounded orthogonal Manhattan paths
+// Generate smooth rounded orthogonal Manhattan paths with 2 bends (bus-style)
 export function createOrthogonalPath(
 	x1: number,
 	y1: number,
@@ -42,17 +42,42 @@ export function createOrthogonalPath(
 	const signY1 = midY > y1 ? 1 : -1;
 	const signY2 = y2 > midY ? 1 : -1;
 
-	// Segment 1: from (x1, y1) down to (x1, midY - r*signY1)
-	// Corner 1: quad curve to (x1 + r*signX, midY)
-	// Segment 2: horizontal to (x2 - r*signX, midY)
-	// Corner 2: quad curve to (x2, midY + r*signY2)
-	// Segment 3: to (x2, y2)
 	return [
 		`M ${x1} ${y1}`,
 		`L ${x1} ${midY - r * signY1}`,
 		`Q ${x1} ${midY} ${x1 + r * signX} ${midY}`,
 		`L ${x2 - r * signX} ${midY}`,
 		`Q ${x2} ${midY} ${x2} ${midY + r * signY2}`,
+		`L ${x2} ${y2}`
+	].join(' ');
+}
+
+// Generate a single smooth rounded 90-degree corner path (Horizontal-then-Vertical)
+export function createCornerPath(
+	x1: number,
+	y1: number,
+	x2: number,
+	y2: number,
+	radius = 8
+): string {
+	// If perfectly vertical
+	if (Math.abs(x1 - x2) < 2) {
+		return `M ${x1} ${y1} L ${x2} ${y2}`;
+	}
+
+	// If perfectly horizontal
+	if (Math.abs(y1 - y2) < 2) {
+		return `M ${x1} ${y1} L ${x2} ${y2}`;
+	}
+
+	const r = Math.min(radius, Math.abs(x2 - x1) / 2, Math.abs(y2 - y1) / 2);
+	const signX = x2 > x1 ? 1 : -1;
+	const signY = y2 > y1 ? 1 : -1;
+
+	return [
+		`M ${x1} ${y1}`,
+		`L ${x2 - r * signX} ${y1}`,
+		`Q ${x2} ${y1} ${x2} ${y1 + r * signY}`,
 		`L ${x2} ${y2}`
 	].join(' ');
 }
@@ -138,75 +163,86 @@ export class TreeLayoutController {
 				if (!sPos) continue;
 
 				const sCenterX = sPos.x + sPos.width / 2;
+				const sCenterY = sPos.y + sPos.height / 2;
 				const sBottomY = sPos.y + sPos.height;
 
-				// If spouse is above union pill
-				if (sBottomY <= uCenterY + 4) {
-					const midY = (sBottomY + uTopY) / 2;
-					const pathD = createOrthogonalPath(sCenterX, sBottomY, uCenterX, uTopY, midY, 6);
-					result.push({
-						id: `line-${spouseId}-${union.id}`,
-						unionId: union.id,
-						sourceId: spouseId,
-						targetId: union.id,
-						type: 'spouse',
-						pathD
-					});
-				} else {
-					// Spouse is approximately side-by-side with union pill
-					const sY = sPos.y + sPos.height / 2;
-					if (sPos.x < uPos.x) {
-						// Spouse is on left
-						const pathD = `M ${sPos.x + sPos.width} ${sY} L ${uPos.x} ${uCenterY}`;
-						result.push({
-							id: `line-${spouseId}-${union.id}`,
-							unionId: union.id,
-							sourceId: spouseId,
-							targetId: union.id,
-							type: 'spouse',
-							pathD
-						});
+				const isHorizLeft = sPos.x + sPos.width <= uPos.x + 8;
+				const isHorizRight = sPos.x >= uPos.x + uPos.width - 8;
+				const vertEncloses = sPos.y <= uCenterY && sBottomY >= uCenterY;
+
+				let pathD = '';
+				if (isHorizLeft) {
+					if (vertEncloses) {
+						// Pure horizontal line directly from spouse right edge into union left edge
+						pathD = `M ${sPos.x + sPos.width} ${uCenterY} L ${uPos.x} ${uCenterY}`;
 					} else {
-						// Spouse is on right
-						const pathD = `M ${sPos.x} ${sY} L ${uPos.x + uPos.width} ${uCenterY}`;
-						result.push({
-							id: `line-${spouseId}-${union.id}`,
-							unionId: union.id,
-							sourceId: spouseId,
-							targetId: union.id,
-							type: 'spouse',
-							pathD
-						});
+						// Spouse is higher: exit spouse right edge, corner down into union top
+						const startX = sPos.x + sPos.width;
+						const startY = sCenterY;
+						const targetX = uCenterX - 8;
+						pathD = createCornerPath(startX, startY, targetX, uTopY, 8);
 					}
+				} else if (isHorizRight) {
+					if (vertEncloses) {
+						// Pure horizontal line directly from union right edge into spouse left edge
+						pathD = `M ${uPos.x + uPos.width} ${uCenterY} L ${sPos.x} ${uCenterY}`;
+					} else {
+						// Spouse is higher: exit spouse left edge, corner down into union top
+						const startX = sPos.x;
+						const startY = sCenterY;
+						const targetX = uCenterX + 8;
+						pathD = createCornerPath(startX, startY, targetX, uTopY, 8);
+					}
+				} else {
+					// Spouse is directly above union (overlapping horizontally)
+					const midY = (sBottomY + uTopY) / 2;
+					pathD = createOrthogonalPath(sCenterX, sBottomY, uCenterX, uTopY, midY, 6);
 				}
+
+				result.push({
+					id: `line-${spouseId}-${union.id}`,
+					unionId: union.id,
+					sourceId: spouseId,
+					targetId: union.id,
+					type: 'spouse',
+					pathD
+				});
 			}
 
 			// 2. Lines from Union Pill to Children
 			if (union.children.length > 0) {
-				// Intermediate bus Y below union pill
-				const childrenPositions = union.children
-					.map((cId) => peopleMap.get(cId))
-					.filter((c): c is CardRect => c !== undefined);
+				for (const childId of union.children) {
+					const cPos = peopleMap.get(childId);
+					if (!cPos) continue;
 
-				if (childrenPositions.length > 0) {
-					// Common intermediate horizontal bus
-					const minChildY = Math.min(...childrenPositions.map((c) => c.y));
-					const busY = Math.min(uBottomY + 22, (uBottomY + minChildY) / 2);
+					const cCenterX = cPos.x + cPos.width / 2;
+					const cTopY = cPos.y;
 
-					for (const cPos of childrenPositions) {
-						const cCenterX = cPos.x + cPos.width / 2;
-						const cTopY = cPos.y;
-
-						const pathD = createOrthogonalPath(uCenterX, uBottomY, cCenterX, cTopY, busY, 6);
-						result.push({
-							id: `line-${union.id}-${cPos.id}`,
-							unionId: union.id,
-							sourceId: union.id,
-							targetId: cPos.id,
-							type: 'child',
-							pathD
-						});
+					let pathD = '';
+					if (cCenterX < uPos.x) {
+						// Child is to the left: exit union left edge, horizontal left, corner down into child top
+						pathD = createCornerPath(uPos.x, uCenterY, cCenterX, cTopY, 8);
+					} else if (cCenterX > uPos.x + uPos.width) {
+						// Child is to the right: exit union right edge, horizontal right, corner down into child top
+						pathD = createCornerPath(uPos.x + uPos.width, uCenterY, cCenterX, cTopY, 8);
+					} else {
+						// Child is directly below union
+						if (Math.abs(cCenterX - uCenterX) < 3) {
+							pathD = `M ${uCenterX} ${uBottomY} L ${uCenterX} ${cTopY}`;
+						} else {
+							const midY = (uBottomY + cTopY) / 2;
+							pathD = createOrthogonalPath(uCenterX, uBottomY, cCenterX, cTopY, midY, 6);
+						}
 					}
+
+					result.push({
+						id: `line-${union.id}-${childId}`,
+						unionId: union.id,
+						sourceId: union.id,
+						targetId: childId,
+						type: 'child',
+						pathD
+					});
 				}
 			}
 		}
@@ -258,4 +294,3 @@ export class TreeLayoutController {
 }
 
 export const treeLayout = new TreeLayoutController();
-

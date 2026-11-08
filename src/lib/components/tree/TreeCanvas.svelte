@@ -273,7 +273,7 @@
 		top: 0;
 		left: 0;
 		pointer-events: none;
-		z-index: 5;
+		z-index: 1;
 	}
 
 	.timeline-1975-line {
@@ -335,7 +335,16 @@
 	}
 
 	/* Layers */
-	.tree-unions-layer,
+	.tree-unions-layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 10;
+	}
+
 	.tree-cards-layer {
 		position: absolute;
 		top: 0;
@@ -343,6 +352,7 @@
 		width: 100%;
 		height: 100%;
 		pointer-events: none;
+		z-index: 20;
 	}
 
 	.tree-unions-layer :global(*),
