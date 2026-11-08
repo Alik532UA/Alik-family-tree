@@ -1,6 +1,7 @@
 // src/lib/controllers/treeViewport.svelte.ts
 import { browser } from '$app/environment';
 import { peopleById, type Person, type FamilyUnion } from '$lib/data/familyTree';
+import { treeLayout } from './treeLayout.svelte';
 
 export class TreeViewportController {
 	canvasWidth = 21360;
@@ -75,13 +76,14 @@ export class TreeViewportController {
 	centerOnPerson(id: string, _smooth = true): void {
 		const person = peopleById.get(id);
 		if (!person) return;
+		const pos = treeLayout.personPositions.get(id) || person.svgCoords;
 
 		const targetScale = Math.max(this.scale, 0.85);
 		// On wider screens where PersonDrawer is open on the right (~380px),
 		// offset the center to the left so the person sits right in the middle of the unobstructed workspace
 		const visibleWidth = this.containerWidth > 860 ? this.containerWidth - 380 : this.containerWidth;
-		const targetX = visibleWidth / 2 - (person.svgCoords.x + person.svgCoords.width / 2) * targetScale;
-		const targetY = this.containerHeight / 2 - (person.svgCoords.y + person.svgCoords.height / 2) * targetScale;
+		const targetX = visibleWidth / 2 - (pos.x + pos.width / 2) * targetScale;
+		const targetY = this.containerHeight / 2 - (pos.y + pos.height / 2) * targetScale;
 
 		this.scale = targetScale;
 		this.panX = targetX;

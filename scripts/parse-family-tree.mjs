@@ -152,6 +152,15 @@ for (const raw of rawPeople) {
 	let maidenName = undefined;
 	let currentName = flatName;
 
+	// Extract dates if present (e.g. 1938.01.31 - 1995.10.18 or 1918 - 1979)
+	let dates = undefined;
+	const dateRegex = /(\d{4}(?:\.\d{2}\.\d{2})?(?:\s*[-–—]\s*\d{4}(?:\.\d{2}\.\d{2})?)?)/;
+	const dateMatch = flatName.match(dateRegex);
+	if (dateMatch && dateMatch[1]) {
+		dates = dateMatch[1].replace(/[-–—]/g, '–').replace(/\s+/g, ' ').trim();
+		currentName = currentName.replace(dateRegex, '').replace(/\s+/g, ' ').trim();
+	}
+
 	if (flatName.includes('→')) {
 		const parts = flatName.split('→').map((p) => p.trim());
 		const beforeArrow = parts[0] || '';
@@ -217,6 +226,7 @@ for (const raw of rawPeople) {
 		middleName,
 		lastName,
 		maidenName,
+		dates,
 		gender,
 		branch,
 		generation: gen,
@@ -344,6 +354,7 @@ export interface Person {
 	middleName: string;
 	lastName: string;
 	maidenName?: string;
+	dates?: string;
 	gender: Gender;
 	branch: string;
 	generation: number;

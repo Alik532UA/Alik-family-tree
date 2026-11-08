@@ -16,6 +16,7 @@ export interface Person {
 	middleName: string;
 	lastName: string;
 	maidenName?: string;
+	dates?: string;
 	gender: Gender;
 	branch: string;
 	generation: number;
