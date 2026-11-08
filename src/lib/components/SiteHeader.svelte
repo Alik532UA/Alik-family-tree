@@ -11,13 +11,19 @@
 
 	function toggleFullscreen() {
 		if (!document.fullscreenElement) {
-			document.documentElement.requestFullscreen().then(() => {
-				isFullscreen = true;
-			}).catch(() => {});
+			document.documentElement
+				.requestFullscreen()
+				.then(() => {
+					isFullscreen = true;
+				})
+				.catch(() => {});
 		} else {
-			document.exitFullscreen().then(() => {
-				isFullscreen = false;
-			}).catch(() => {});
+			document
+				.exitFullscreen()
+				.then(() => {
+					isFullscreen = false;
+				})
+				.catch(() => {});
 		}
 	}
 </script>
@@ -47,18 +53,10 @@
 			>
 				Каталог
 			</a>
-			<a
-				href="{base}/stats"
-				class="nav-link"
-				class:active={page.url.pathname === `${base}/stats`}
-			>
+			<a href="{base}/stats" class="nav-link" class:active={page.url.pathname === `${base}/stats`}>
 				Статистика
 			</a>
-			<a
-				href="{base}/about"
-				class="nav-link"
-				class:active={page.url.pathname === `${base}/about`}
-			>
+			<a href="{base}/about" class="nav-link" class:active={page.url.pathname === `${base}/about`}>
 				Про проєкт
 			</a>
 		</nav>
@@ -81,7 +79,14 @@
 					aria-label="Зменшити масштаб"
 					title="Зменшити (-)"
 				>
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"><line x1="5" y1="12" x2="19" y2="12" /></svg
+					>
 				</button>
 				<button
 					type="button"
@@ -98,7 +103,15 @@
 					aria-label="Збільшити масштаб"
 					title="Збільшити (+)"
 				>
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg
+					>
 				</button>
 				<button
 					type="button"
@@ -107,7 +120,17 @@
 					aria-label="Вмістити на екран"
 					title="Вмістити на екран"
 				>
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						><path
+							d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+						/></svg
+					>
 				</button>
 			</div>
 		{/if}
@@ -121,12 +144,34 @@
 				if (privacy.isUnlocked) privacy.lock();
 				else privacy.openUnlockModal();
 			}}
-			title={privacy.isUnlocked ? 'Сімейний доступ відкрито. Натисніть для блокування.' : 'Дані живих родичів захищено. Натисніть для вводу коду.'}
+			title={privacy.isUnlocked
+				? 'Сімейний доступ відкрито. Натисніть для блокування.'
+				: 'Дані живих родичів захищено. Натисніть для вводу коду.'}
 		>
 			{#if privacy.isUnlocked}
-				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path
+						d="M7 11V7a5 5 0 0 1 9.9-1"
+					/></svg
+				>
 			{:else}
-				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path
+						d="M7 11V7a5 5 0 0 1 10 0v4"
+					/></svg
+				>
 			{/if}
 		</button>
 
@@ -138,7 +183,17 @@
 			aria-label="На весь екран"
 			title="На весь екран"
 		>
-			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+			<svg
+				width="16"
+				height="16"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				><path
+					d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+				/></svg
+			>
 		</button>
 
 		<!-- Theme Menu -->
@@ -290,4 +345,3 @@
 		}
 	}
 </style>
-

@@ -29,13 +29,56 @@
 	<div class="toast-content">
 		<div class="toast-icon">
 			{#if item.type === 'success'}
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+				<svg
+					width="18"
+					height="18"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg
+				>
 			{:else if item.type === 'error'}
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+				<svg
+					width="18"
+					height="18"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+					><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line
+						x1="12"
+						y1="16"
+						x2="12.01"
+						y2="16"
+					/></svg
+				>
 			{:else if item.type === 'warn'}
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+				<svg
+					width="18"
+					height="18"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+					><path
+						d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+					/><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg
+				>
 			{:else}
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+				<svg
+					width="18"
+					height="18"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+					><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line
+						x1="12"
+						y1="8"
+						x2="12.01"
+						y2="8"
+					/></svg
+				>
 			{/if}
 		</div>
 
@@ -60,7 +103,14 @@
 			aria-label="Закрити сповіщення"
 			onclick={() => ondismiss(item.id)}
 		>
-			<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+			<svg
+				width="14"
+				height="14"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12" /></svg
+			>
 		</button>
 	</div>
 
@@ -99,10 +149,18 @@
 		flex-shrink: 0;
 	}
 
-	.toast-success .toast-icon { color: var(--color-success); }
-	.toast-error .toast-icon { color: var(--color-danger); }
-	.toast-warn .toast-icon { color: var(--color-warning); }
-	.toast-info .toast-icon { color: var(--color-accent); }
+	.toast-success .toast-icon {
+		color: var(--color-success);
+	}
+	.toast-error .toast-icon {
+		color: var(--color-danger);
+	}
+	.toast-warn .toast-icon {
+		color: var(--color-warning);
+	}
+	.toast-info .toast-icon {
+		color: var(--color-accent);
+	}
 
 	.toast-message {
 		flex: 1;
@@ -146,8 +204,13 @@
 		background: var(--color-accent);
 		transition: width 0.1s linear;
 	}
-	.toast-success .toast-progress-bar { background: var(--color-success); }
-	.toast-error .toast-progress-bar { background: var(--color-danger); }
-	.toast-warn .toast-progress-bar { background: var(--color-warning); }
+	.toast-success .toast-progress-bar {
+		background: var(--color-success);
+	}
+	.toast-error .toast-progress-bar {
+		background: var(--color-danger);
+	}
+	.toast-warn .toast-progress-bar {
+		background: var(--color-warning);
+	}
 </style>
-

@@ -22,7 +22,10 @@ class ScrollbarController {
 	init(): void {
 		if (!browser) return;
 		const saved = storage.get(SCROLLBAR_KEY);
-		if (saved && (saved === 'always' || saved === 'wide' || saved === 'native' || saved === 'off')) {
+		if (
+			saved &&
+			(saved === 'always' || saved === 'wide' || saved === 'native' || saved === 'off')
+		) {
 			this.mode = saved as ScrollbarMode;
 		}
 	}
@@ -43,4 +46,3 @@ class ScrollbarController {
 }
 
 export const scrollbar = new ScrollbarController();
-

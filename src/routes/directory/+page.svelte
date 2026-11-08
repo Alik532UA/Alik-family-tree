@@ -25,7 +25,8 @@
 					p.branch.toLowerCase().includes(q);
 
 				const matchesBranch = selectedBranch === 'Всі' || p.branch === selectedBranch;
-				const matchesGen = selectedGeneration === 'Всі' || p.generation === Number(selectedGeneration);
+				const matchesGen =
+					selectedGeneration === 'Всі' || p.generation === Number(selectedGeneration);
 
 				return matchesSearch && matchesBranch && matchesGen;
 			})
@@ -48,13 +49,18 @@
 
 <svelte:head>
 	<title>Каталог родини | Alik-family-tree</title>
-	<meta name="description" content="Повний алфавітний та поколінний каталог родинного древа Запольнових." />
+	<meta
+		name="description"
+		content="Повний алфавітний та поколінний каталог родинного древа Запольнових."
+	/>
 </svelte:head>
 
 <div class="directory-page-container">
 	<div class="directory-header">
 		<h1 class="page-title">Каталог родичів</h1>
-		<p class="page-subtitle">Всього в родинному архіві: {familyTreeData.meta.totalPeople} осіб у 8 поколіннях</p>
+		<p class="page-subtitle">
+			Всього в родинному архіві: {familyTreeData.meta.totalPeople} осіб у 8 поколіннях
+		</p>
 	</div>
 
 	<!-- Filters & Controls Bar -->
@@ -121,12 +127,26 @@
 					<span>Діти: <strong>{person.children.length}</strong></span>
 				</div>
 
-				<button
-					type="button"
-					class="view-tree-btn"
-					onclick={() => viewOnTree(person)}
-				>
-					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+				<button type="button" class="view-tree-btn" onclick={() => viewOnTree(person)}>
+					<svg
+						width="14"
+						height="14"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" /><line
+							x1="12"
+							y1="2"
+							x2="12"
+							y2="6"
+						/><line x1="12" y1="18" x2="12" y2="22" /><line x1="2" y1="12" x2="6" y2="12" /><line
+							x1="18"
+							y1="12"
+							x2="22"
+							y2="12"
+						/></svg
+					>
 					Показати на древі
 				</button>
 			</div>
@@ -225,7 +245,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+		transition:
+			transform 0.15s ease,
+			border-color 0.15s ease,
+			box-shadow 0.15s ease;
 	}
 
 	.person-card:hover {
@@ -307,4 +330,3 @@
 		border-color: var(--color-accent);
 	}
 </style>
-

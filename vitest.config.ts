@@ -4,8 +4,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
-		include: ['src/**/*.{test,spec}.ts', 'tests/**/*.{test,spec}.ts'],
+		include: ['src/**/*.{test,spec}.ts'],
 		environment: 'node'
 	}
 });
-

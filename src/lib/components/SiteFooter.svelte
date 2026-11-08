@@ -24,7 +24,9 @@
 
 <footer class="site-footer">
 	<div class="footer-left">
-		<span class="footer-meta">Архів родини: <strong>183 особи</strong> • <strong>8 поколінь</strong> • версія 2023.02.05</span>
+		<span class="footer-meta"
+			>Архів родини: <strong>183 особи</strong> • <strong>8 поколінь</strong> • версія 2023.02.05</span
+		>
 	</div>
 
 	<div class="footer-center">
@@ -40,7 +42,17 @@
 			onclick={handleEmailClick}
 			title="Натисніть для копіювання пошти"
 		>
-			<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+			<svg
+				width="14"
+				height="14"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				><rect width="20" height="16" x="2" y="4" rx="2" /><path
+					d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+				/></svg
+			>
 			<span>{contactEmail}</span>
 		</button>
 	</div>
@@ -112,4 +124,3 @@
 		}
 	}
 </style>
-

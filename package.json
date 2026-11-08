@@ -11,16 +11,24 @@
 		"dev": "vite dev",
 		"build": "node scripts/parse-family-tree.mjs && vite build",
 		"preview": "vite preview",
+		"prepare": "svelte-kit sync && husky || echo ''",
+		"bump": "node scripts/bump-version.mjs",
+		"version:patch": "npm version patch --no-git-tag-version",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"check:build": "node scripts/check-build.mjs",
+		"lint": "npm run lint:format && npm run lint:code",
+		"lint:format": "prettier --check .",
+		"lint:code": "eslint .",
+		"format": "prettier --write .",
+		"audit:ci": "node scripts/check-audit.mjs",
 		"test": "vitest run",
 		"test:unit": "vitest run",
-		"lint": "eslint .",
-		"format": "prettier --write .",
+		"test:e2e": "playwright test",
 		"data:parse": "node scripts/parse-family-tree.mjs"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.65.0",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.50.2",
 		"@sveltejs/vite-plugin-svelte": "^6.2.4",
@@ -28,6 +36,7 @@
 		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.14.0",
+		"husky": "^9.1.7",
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.4.1",
 		"svelte": "^5.48.2",
@@ -42,4 +51,3 @@
 		"lucide-svelte": "^0.563.0"
 	}
 }
-

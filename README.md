@@ -62,4 +62,3 @@ npm run test:unit
 # Збірка статичного сайту
 npm run build
 ```
-

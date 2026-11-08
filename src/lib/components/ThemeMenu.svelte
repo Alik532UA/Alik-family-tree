@@ -57,12 +57,23 @@
 		title="Тема сайту"
 	>
 		<!-- Theme palette icon -->
-		<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
-			<circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
-			<circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
-			<circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
-			<path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+		<svg
+			width="18"
+			height="18"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
+			<circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+			<circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+			<circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+			<circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+			<path
+				d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"
+			/>
 		</svg>
 		<span class="theme-current-name">{themeLabels[themeController.shown]}</span>
 	</button>
@@ -96,7 +107,15 @@
 						<span class="theme-swatch swatch-{theme}"></span>
 						<span class="theme-btn-label">{themeLabels[theme]}</span>
 						{#if themeController.choice === theme}
-							<svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+							<svg
+								class="check-icon"
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.5"
+							>
 								<polyline points="20 6 9 17 4 12" />
 							</svg>
 						{/if}
@@ -124,7 +143,9 @@
 		color: var(--color-text);
 		border: 1px solid var(--color-border);
 		border-radius: 8px;
-		transition: background-color 0.2s, border-color 0.2s;
+		transition:
+			background-color 0.2s,
+			border-color 0.2s;
 	}
 
 	.theme-trigger:hover {
@@ -155,7 +176,9 @@
 		border: 1px solid var(--color-border);
 		border-radius: 10px;
 		padding: 8px;
-		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+		box-shadow:
+			0 10px 25px -5px rgba(0, 0, 0, 0.25),
+			0 8px 10px -6px rgba(0, 0, 0, 0.1);
 	}
 
 	.theme-title {
@@ -184,7 +207,9 @@
 		border: 1px solid transparent;
 		background: transparent;
 		text-align: left;
-		transition: transform 0.1s ease, border-color 0.15s ease;
+		transition:
+			transform 0.1s ease,
+			border-color 0.15s ease;
 	}
 
 	.theme-button:hover {
@@ -230,11 +255,21 @@
 		flex-shrink: 0;
 	}
 
-	.swatch-light { background: #ffffff; }
-	.swatch-dark { background: #0f172a; }
-	.swatch-sepia { background: #8c531b; }
-	.swatch-meadow { background: #2e7d32; }
-	.swatch-sky { background: #0284c7; }
+	.swatch-light {
+		background: #ffffff;
+	}
+	.swatch-dark {
+		background: #0f172a;
+	}
+	.swatch-sepia {
+		background: #8c531b;
+	}
+	.swatch-meadow {
+		background: #2e7d32;
+	}
+	.swatch-sky {
+		background: #0284c7;
+	}
 
 	.theme-btn-label {
 		flex: 1;
@@ -244,4 +279,3 @@
 		margin-left: auto;
 	}
 </style>
-

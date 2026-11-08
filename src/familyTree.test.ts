@@ -31,4 +31,3 @@ describe('Family Tree Dataset Integrity', () => {
 		expect(alentiy?.name).toContain('Алентій Запольнов');
 	});
 });
-

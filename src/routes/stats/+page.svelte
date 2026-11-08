@@ -12,7 +12,10 @@
 
 <svelte:head>
 	<title>Статистика родинного древа | Alik-family-tree</title>
-	<meta name="description" content="Аналітика та статистика поколінь та гілок родини Запольнових." />
+	<meta
+		name="description"
+		content="Аналітика та статистика поколінь та гілок родини Запольнових."
+	/>
 </svelte:head>
 
 <div class="stats-page-container">
@@ -86,7 +89,9 @@
 			<div class="ancestor-card">
 				<span class="ancestor-gen">Покоління 1 (початок XIX століття)</span>
 				<h3 class="ancestor-name">Алентій Запольнов</h3>
-				<p class="ancestor-desc">Прямий родоначальник гілки Запольнових, предок Олександра Алентивича.</p>
+				<p class="ancestor-desc">
+					Прямий родоначальник гілки Запольнових, предок Олександра Алентивича.
+				</p>
 			</div>
 			<div class="ancestor-card">
 				<span class="ancestor-gen">Покоління 2</span>
@@ -268,4 +273,3 @@
 		line-height: 1.4;
 	}
 </style>
-

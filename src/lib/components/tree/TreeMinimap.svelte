@@ -22,9 +22,15 @@
 		const visibleTop = -treeViewport.panY / scale;
 
 		const x = Math.max(0, Math.min(MINIMAP_WIDTH, visibleLeft * minimapScale));
-		const y = Math.max(0, Math.min(minimapBoxHeight, (visibleTop / treeViewport.canvasHeight) * minimapBoxHeight));
+		const y = Math.max(
+			0,
+			Math.min(minimapBoxHeight, (visibleTop / treeViewport.canvasHeight) * minimapBoxHeight)
+		);
 		const w = Math.max(10, Math.min(MINIMAP_WIDTH, visibleWidth * minimapScale));
-		const h = Math.max(8, Math.min(minimapBoxHeight, (visibleHeight / treeViewport.canvasHeight) * minimapBoxHeight));
+		const h = Math.max(
+			8,
+			Math.min(minimapBoxHeight, (visibleHeight / treeViewport.canvasHeight) * minimapBoxHeight)
+		);
 
 		return { x, y, width: w, height: h };
 	});
@@ -75,9 +81,23 @@
 			title={isExpanded ? 'Згорнути' : 'Розгорнути'}
 		>
 			{#if isExpanded}
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+				<svg
+					width="14"
+					height="14"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"><polyline points="6 9 12 15 18 9" /></svg
+				>
 			{:else}
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+				<svg
+					width="14"
+					height="14"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"><polyline points="18 15 12 9 6 15" /></svg
+				>
 			{/if}
 		</button>
 	</div>
@@ -179,4 +199,3 @@
 		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
 	}
 </style>
-

@@ -2,12 +2,12 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { readFileSync } from 'node:fs';
 import { defineConfig } from 'vite';
 
-const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as { version: string };
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as {
+	version: string;
+};
 
 export default defineConfig({
-	plugins: [
-		sveltekit()
-	],
+	plugins: [sveltekit()],
 	define: {
 		__APP_VERSION__: JSON.stringify(pkg.version)
 	},
@@ -15,4 +15,3 @@ export default defineConfig({
 		sourcemap: process.env.SOURCEMAPS === 'hidden' ? 'hidden' : false
 	}
 });
-

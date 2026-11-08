@@ -64,7 +64,13 @@
 	function handleTouchMove(event: TouchEvent) {
 		if (event.touches.length === 1 && event.touches[0]) {
 			treeViewport.drag(event.touches[0].clientX, event.touches[0].clientY);
-		} else if (event.touches.length === 2 && event.touches[0] && event.touches[1] && initialPinchDistance > 0 && containerEl) {
+		} else if (
+			event.touches.length === 2 &&
+			event.touches[0] &&
+			event.touches[1] &&
+			initialPinchDistance > 0 &&
+			containerEl
+		) {
 			const dx = event.touches[0].clientX - event.touches[1].clientX;
 			const dy = event.touches[0].clientY - event.touches[1].clientY;
 			const currentDistance = Math.hypot(dx, dy);
@@ -135,7 +141,12 @@
 				class="timeline-1975-line"
 			/>
 			{#each [2000, 4500, 7000, 9500, 12000, 14500, 17000, 19500] as tx}
-				<text x={tx} y={treeLayout.timeline1975Y - 8} class="timeline-1975-text" text-anchor="middle">
+				<text
+					x={tx}
+					y={treeLayout.timeline1975Y - 8}
+					class="timeline-1975-text"
+					text-anchor="middle"
+				>
 					— — — 1975 рік — — —
 				</text>
 			{/each}
@@ -145,14 +156,12 @@
 				{@const isFocused = Boolean(
 					treeViewport.selectedPerson &&
 					(treeViewport.selectedPerson.id === line.sourceId ||
-					treeViewport.selectedPerson.id === line.targetId ||
-					treeViewport.relatedPersonIds.has(line.sourceId) ||
-					treeViewport.relatedPersonIds.has(line.targetId))
+						treeViewport.selectedPerson.id === line.targetId ||
+						treeViewport.relatedPersonIds.has(line.sourceId) ||
+						treeViewport.relatedPersonIds.has(line.targetId))
 				)}
 				{@const isDimmed = Boolean(
-					treeViewport.selectedPerson !== null &&
-					treeViewport.dimUnrelated &&
-					!isFocused
+					treeViewport.selectedPerson !== null && treeViewport.dimUnrelated && !isFocused
 				)}
 				<path
 					d={line.pathD}
@@ -173,7 +182,11 @@
 						{@const pPos = treeLayout.personPositions.get(pId)}
 						{#if pPos}
 							<path
-								d="M {sPos.x + sPos.width / 2} {sPos.y} C {sPos.x + sPos.width / 2} {(sPos.y + pPos.y + pPos.height) / 2}, {pPos.x + pPos.width / 2} {(sPos.y + pPos.y + pPos.height) / 2}, {pPos.x + pPos.width / 2} {pPos.y + pPos.height}"
+								d="M {sPos.x + sPos.width / 2} {sPos.y} C {sPos.x + sPos.width / 2} {(sPos.y +
+									pPos.y +
+									pPos.height) /
+									2}, {pPos.x + pPos.width / 2} {(sPos.y + pPos.y + pPos.height) / 2}, {pPos.x +
+									pPos.width / 2} {pPos.y + pPos.height}"
 								class="direct-relationship-line parent-direct-line"
 							/>
 						{/if}
@@ -183,7 +196,10 @@
 						{@const cPos = treeLayout.personPositions.get(cId)}
 						{#if cPos}
 							<path
-								d="M {sPos.x + sPos.width / 2} {sPos.y + sPos.height} C {sPos.x + sPos.width / 2} {(sPos.y + sPos.height + cPos.y) / 2}, {cPos.x + cPos.width / 2} {(sPos.y + sPos.height + cPos.y) / 2}, {cPos.x + cPos.width / 2} {cPos.y}"
+								d="M {sPos.x + sPos.width / 2} {sPos.y + sPos.height} C {sPos.x +
+									sPos.width / 2} {(sPos.y + sPos.height + cPos.y) / 2}, {cPos.x +
+									cPos.width / 2} {(sPos.y + sPos.height + cPos.y) / 2}, {cPos.x +
+									cPos.width / 2} {cPos.y}"
 								class="direct-relationship-line child-direct-line"
 							/>
 						{/if}
@@ -197,11 +213,7 @@
 			{#each familyTreeData.unions || [] as union (union.id)}
 				{@const uPos = treeLayout.unionPositions.get(union.id)}
 				{#if uPos}
-					<UnionPill
-						{union}
-						rect={uPos}
-						onclick={() => handleUnionClick(union)}
-					/>
+					<UnionPill {union} rect={uPos} onclick={() => handleUnionClick(union)} />
 				{/if}
 			{/each}
 		</div>
@@ -217,7 +229,8 @@
 				{@const isSpouse = treeViewport.selectedPerson?.spouses.includes(person.id) || false}
 				{@const isSibling = treeViewport.selectedPerson?.siblings.includes(person.id) || false}
 				{@const isRelated = isSelected || isParent || isChild || isSpouse || isSibling}
-				{@const isDimmed = treeViewport.selectedPerson !== null && treeViewport.dimUnrelated && !isRelated}
+				{@const isDimmed =
+					treeViewport.selectedPerson !== null && treeViewport.dimUnrelated && !isRelated}
 
 				{#if pPos}
 					<PersonCard
@@ -300,7 +313,10 @@
 		stroke-width: 1.8;
 		stroke-linecap: round;
 		stroke-linejoin: round;
-		transition: stroke 0.2s ease, stroke-width 0.2s ease, opacity 0.2s ease;
+		transition:
+			stroke 0.2s ease,
+			stroke-width 0.2s ease,
+			opacity 0.2s ease;
 		opacity: 0.8;
 	}
 

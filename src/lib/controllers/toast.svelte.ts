@@ -28,7 +28,9 @@ class ToastController {
 
 	show(type: ToastType, message: string, options?: ToastOptions): string {
 		const id = `toast-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-		const duration = options?.action ? 0 : (options?.duration ?? (type === 'error' ? 7000 : type === 'warn' ? 5000 : 3500));
+		const duration = options?.action
+			? 0
+			: (options?.duration ?? (type === 'error' ? 7000 : type === 'warn' ? 5000 : 3500));
 
 		const item: ToastItem = {
 			id,
@@ -106,4 +108,3 @@ class ToastController {
 }
 
 export const toast = new ToastController();
-

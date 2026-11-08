@@ -49,7 +49,7 @@
 	style="left: {rect.x}px; top: {rect.y}px; width: {rect.width}px; min-height: {rect.height}px;"
 	role="button"
 	tabindex="0"
-	aria-label="{person.name}"
+	aria-label={person.name}
 	{onclick}
 	onkeydown={handleKeydown}
 >
@@ -70,7 +70,10 @@
 		{#if person.middleName}
 			<div class="name-line middle-name">{person.middleName}</div>
 		{/if}
-		<div class="name-line last-name" title="{person.maidenName ? `${person.maidenName} → ` : ''}{person.lastName}">
+		<div
+			class="name-line last-name"
+			title="{person.maidenName ? `${person.maidenName} → ` : ''}{person.lastName}"
+		>
 			{#if person.maidenName}
 				<span class="maiden-part">{person.maidenName} → </span>
 			{/if}
@@ -99,7 +102,14 @@
 		user-select: none;
 		outline: none !important;
 		-webkit-tap-highlight-color: transparent;
-		transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.25s ease, border-color 0.15s ease;
+		content-visibility: auto;
+		contain-intrinsic-size: 220px 84px;
+		contain: layout style;
+		transition:
+			transform 0.15s ease,
+			box-shadow 0.15s ease,
+			opacity 0.25s ease,
+			border-color 0.15s ease;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 	}
 
@@ -198,31 +208,41 @@
 	.person-card-node.selected {
 		z-index: 30;
 		border-color: #2563eb;
-		box-shadow: 0 0 0 3px #2563eb, 0 8px 20px rgba(37, 99, 235, 0.35);
+		box-shadow:
+			0 0 0 3px #2563eb,
+			0 8px 20px rgba(37, 99, 235, 0.35);
 		animation: pulse-border 2.5s infinite ease-in-out;
 	}
 
 	.person-card-node.parent {
 		z-index: 28;
 		border-color: #0284c7;
-		box-shadow: 0 0 0 2.5px #0284c7, 0 6px 16px rgba(2, 132, 199, 0.25);
+		box-shadow:
+			0 0 0 2.5px #0284c7,
+			0 6px 16px rgba(2, 132, 199, 0.25);
 	}
 
 	.person-card-node.spouse {
 		z-index: 28;
 		border-color: #c026d3;
-		box-shadow: 0 0 0 2.5px #c026d3, 0 6px 16px rgba(192, 38, 211, 0.25);
+		box-shadow:
+			0 0 0 2.5px #c026d3,
+			0 6px 16px rgba(192, 38, 211, 0.25);
 	}
 
 	.person-card-node.child {
 		z-index: 28;
 		border-color: #059669;
-		box-shadow: 0 0 0 2.5px #059669, 0 6px 16px rgba(5, 150, 105, 0.25);
+		box-shadow:
+			0 0 0 2.5px #059669,
+			0 6px 16px rgba(5, 150, 105, 0.25);
 	}
 
 	.person-card-node.highlighted {
 		border-color: #eab308;
-		box-shadow: 0 0 0 3px #eab308, 0 8px 20px rgba(234, 179, 8, 0.35);
+		box-shadow:
+			0 0 0 3px #eab308,
+			0 8px 20px rgba(234, 179, 8, 0.35);
 	}
 
 	/* Floating Pill Role Badges */
@@ -242,13 +262,22 @@
 		white-space: nowrap;
 	}
 
-	.pill-selected { background: #2563eb; }
-	.pill-parent { background: #0284c7; }
-	.pill-spouse { background: #c026d3; }
-	.pill-child { background: #059669; }
+	.pill-selected {
+		background: #2563eb;
+	}
+	.pill-parent {
+		background: #0284c7;
+	}
+	.pill-spouse {
+		background: #c026d3;
+	}
+	.pill-child {
+		background: #059669;
+	}
 
 	@keyframes pulse-border {
-		0%, 100% {
+		0%,
+		100% {
 			transform: scale(1);
 		}
 		50% {
@@ -256,4 +285,3 @@
 		}
 	}
 </style>
-

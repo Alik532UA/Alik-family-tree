@@ -37,7 +37,12 @@ export function createOrthogonalPath(
 		return `M ${x1} ${y1} L ${x2} ${y2}`;
 	}
 
-	const r = Math.min(radius, Math.abs(x1 - x2) / 2, Math.abs(y1 - midY) / 2, Math.abs(y2 - midY) / 2);
+	const r = Math.min(
+		radius,
+		Math.abs(x1 - x2) / 2,
+		Math.abs(y1 - midY) / 2,
+		Math.abs(y2 - midY) / 2
+	);
 	const signX = x2 > x1 ? 1 : -1;
 	const signY1 = midY > y1 ? 1 : -1;
 	const signY2 = y2 > midY ? 1 : -1;

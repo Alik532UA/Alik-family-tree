@@ -58,7 +58,10 @@
 	color-scheme: light dark;
 	--color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
 	--color-surface: light-dark(var(--theme-light-surface), var(--theme-dark-surface));
-	--color-surface-hover: light-dark(var(--theme-light-surface-hover), var(--theme-dark-surface-hover));
+	--color-surface-hover: light-dark(
+		var(--theme-light-surface-hover),
+		var(--theme-dark-surface-hover)
+	);
 	--color-text: light-dark(var(--theme-light-text), var(--theme-dark-text));
 	--color-text-muted: light-dark(var(--theme-light-text-muted), var(--theme-dark-text-muted));
 	--color-border: light-dark(var(--theme-light-border), var(--theme-dark-border));
@@ -159,7 +162,16 @@ body {
 	padding: 0;
 	background: var(--color-bg);
 	color: var(--color-text);
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	min-height: 100vh;
 	display: flex;
@@ -191,7 +203,9 @@ button {
 	cursor: pointer;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
 	font-family: inherit;
 	color: var(--color-text);
 	background: var(--color-surface);
@@ -205,4 +219,3 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-

@@ -37,10 +37,7 @@
 <svelte:window onkeydown={handleKeydown} />
 
 {#if person}
-	<aside
-		class="person-drawer"
-		aria-label="Картка персони: {person.name}"
-	>
+	<aside class="person-drawer" aria-label="Картка персони: {person.name}">
 		<div class="drawer-header">
 			<div class="drawer-header-left">
 				<span class="branch-pill branch-{person.branch.toLowerCase()}">{person.branch}</span>
@@ -49,13 +46,16 @@
 					<span class="gender-pill">{person.gender === 'female' ? 'Жінка' : 'Чоловік'}</span>
 				{/if}
 			</div>
-			<button
-				type="button"
-				class="drawer-close-btn"
-				onclick={onclose}
-				aria-label="Закрити картку"
-			>
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+			<button type="button" class="drawer-close-btn" onclick={onclose} aria-label="Закрити картку">
+				<svg
+					width="18"
+					height="18"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+					><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg
+				>
 			</button>
 		</div>
 
@@ -64,9 +64,29 @@
 			<div class="person-profile-header">
 				<div class="person-avatar" class:female={person.gender === 'female'}>
 					{#if person.gender === 'female'}
-						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/><circle cx="12" cy="8" r="3" fill="currentColor"/></svg>
+						<svg
+							width="28"
+							height="28"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" /><path
+								d="M6 20v-2a6 6 0 0 1 12 0v2"
+							/><circle cx="12" cy="8" r="3" fill="currentColor" /></svg
+						>
 					{:else}
-						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+						<svg
+							width="28"
+							height="28"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" /><path
+								d="M6 20v-2a6 6 0 0 1 12 0v2"
+							/></svg
+						>
 					{/if}
 				</div>
 				<div class="person-names-block">
@@ -92,16 +112,37 @@
 				<div class="privacy-banner" class:unlocked={privacy.isUnlocked}>
 					<div class="privacy-icon">
 						{#if privacy.isUnlocked}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path
+									d="M7 11V7a5 5 0 0 1 9.9-1"
+								/></svg
+							>
 						{:else}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path
+									d="M7 11V7a5 5 0 0 1 10 0v4"
+								/></svg
+							>
 						{/if}
 					</div>
 					<div class="privacy-text">
 						{#if privacy.isUnlocked}
 							<span class="privacy-status">Сімейний доступ відкрито:</span> усі конфіденційні деталі доступні
 						{:else}
-							<span class="privacy-status">Захист даних живих родичів:</span> особисті контакти та деталі приховані
+							<span class="privacy-status">Захист даних живих родичів:</span> особисті контакти та деталі
+							приховані
 						{/if}
 					</div>
 					{#if !privacy.isUnlocked}
@@ -123,15 +164,39 @@
 					class="action-btn"
 					onclick={() => treeViewport.centerOnPerson(person.id)}
 				>
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" /><line
+							x1="12"
+							y1="2"
+							x2="12"
+							y2="6"
+						/><line x1="12" y1="18" x2="12" y2="22" /><line x1="2" y1="12" x2="6" y2="12" /><line
+							x1="18"
+							y1="12"
+							x2="22"
+							y2="12"
+						/></svg
+					>
 					Фокусувати
 				</button>
-				<button
-					type="button"
-					class="action-btn"
-					onclick={copyPersonLink}
-				>
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+				<button type="button" class="action-btn" onclick={copyPersonLink}>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path
+							d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+						/></svg
+					>
 					Поділитися
 				</button>
 			</div>
@@ -290,7 +355,8 @@
 		color: var(--color-on-accent);
 	}
 
-	.gen-pill, .gender-pill {
+	.gen-pill,
+	.gender-pill {
 		font-size: 11px;
 		font-weight: 600;
 		padding: 2px 7px;
@@ -525,4 +591,3 @@
 		padding: 4px 0;
 	}
 </style>
-

@@ -3,7 +3,12 @@ export const SCROLLBAR_KEY = 'scrollbar_mode';
 
 export type ScrollbarMode = 'always' | 'wide' | 'native' | 'off';
 
-export const SCROLLBAR_MODES: readonly ScrollbarMode[] = ['always', 'wide', 'native', 'off'] as const;
+export const SCROLLBAR_MODES: readonly ScrollbarMode[] = [
+	'always',
+	'wide',
+	'native',
+	'off'
+] as const;
 
 export const DEFAULT_MODE: ScrollbarMode = 'wide';
 
@@ -24,4 +29,3 @@ export function firstFrame(storagePrefix: string): string {
 		}
 	});
 }
-

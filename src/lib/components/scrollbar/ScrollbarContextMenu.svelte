@@ -35,7 +35,10 @@
 
 	<div
 		class="scrollbar-context-menu"
-		style="left: {Math.min(scrollbar.menuPosition.x, window.innerWidth - 240)}px; top: {Math.min(scrollbar.menuPosition.y, window.innerHeight - 180)}px;"
+		style="left: {Math.min(scrollbar.menuPosition.x, window.innerWidth - 240)}px; top: {Math.min(
+			scrollbar.menuPosition.y,
+			window.innerHeight - 180
+		)}px;"
 		role="menu"
 		aria-label="Налаштування смуги прокрутки"
 	>
@@ -50,7 +53,14 @@
 			>
 				<span class="mode-label">{modeLabels[mode]}</span>
 				{#if scrollbar.mode === mode}
-					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+					<svg
+						width="14"
+						height="14"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg
+					>
 				{/if}
 			</button>
 		{/each}
@@ -113,4 +123,3 @@
 		color: var(--color-accent);
 	}
 </style>
-

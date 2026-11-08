@@ -88,18 +88,67 @@ function detectGender(firstName, middleName, lastName, maidenName) {
 	const f = (firstName || '').toLowerCase();
 	const md = (maidenName || '').toLowerCase();
 
-	if (m.endsWith('івна') || m.endsWith('ївна') || m.endsWith('овна') || m.endsWith('евна')) return 'female';
+	if (m.endsWith('івна') || m.endsWith('ївна') || m.endsWith('овна') || m.endsWith('евна'))
+		return 'female';
 	if (m.endsWith('ович') || m.endsWith('евич') || m.endsWith('ич')) return 'male';
 
 	if (maidenName || md.length > 0) return 'female';
-	if (l.endsWith('ова') || l.endsWith('єва') || l.endsWith('ська') || l.endsWith('цька') || l.endsWith('ина') || l.endsWith('іна')) return 'female';
-	if (l.endsWith('ов') || l.endsWith('єв') || l.endsWith('ський') || l.endsWith('цький') || l.endsWith('ин') || l.endsWith('ін')) return 'male';
+	if (
+		l.endsWith('ова') ||
+		l.endsWith('єва') ||
+		l.endsWith('ська') ||
+		l.endsWith('цька') ||
+		l.endsWith('ина') ||
+		l.endsWith('іна')
+	)
+		return 'female';
+	if (
+		l.endsWith('ов') ||
+		l.endsWith('єв') ||
+		l.endsWith('ський') ||
+		l.endsWith('цький') ||
+		l.endsWith('ин') ||
+		l.endsWith('ін')
+	)
+		return 'male';
 
 	const femaleNames = new Set([
-		'марія', 'ольга', 'віра', 'тетяна', 'анна', 'ганна', 'наташа', 'наталія', 'олена', 'ірина', 'людмила', 'галина', 'світлана', 'надія', 'лаврентія'
+		'марія',
+		'ольга',
+		'віра',
+		'тетяна',
+		'анна',
+		'ганна',
+		'наташа',
+		'наталія',
+		'олена',
+		'ірина',
+		'людмила',
+		'галина',
+		'світлана',
+		'надія',
+		'лаврентія'
 	]);
 	const maleNames = new Set([
-		'алік', 'іван', 'олександр', 'ігор', 'веніамин', 'микола', 'петро', 'сергій', 'михайло', 'василь', 'василій', 'дмитро', 'валерій', 'георгій', 'порфирій', 'костянтин', 'константин', 'володимир', 'алентій'
+		'алік',
+		'іван',
+		'олександр',
+		'ігор',
+		'веніамин',
+		'микола',
+		'петро',
+		'сергій',
+		'михайло',
+		'василь',
+		'василій',
+		'дмитро',
+		'валерій',
+		'георгій',
+		'порфирій',
+		'костянтин',
+		'константин',
+		'володимир',
+		'алентій'
 	]);
 
 	if (femaleNames.has(f)) return 'female';
@@ -149,7 +198,10 @@ const personMap = new Map();
 
 for (const raw of rawPeople) {
 	const rawName = cleanHtml(raw.value);
-	const lines = rawName.split('\n').map((l) => l.trim()).filter(Boolean);
+	const lines = rawName
+		.split('\n')
+		.map((l) => l.trim())
+		.filter(Boolean);
 	const flatName = lines.join(' ').replace(/\s+/g, ' ').trim();
 
 	// Extract dates first so they do not contaminate maiden or last names
@@ -174,7 +226,10 @@ for (const raw of rawPeople) {
 		currentName = beforeTokens.slice(0, -1).join(' ') + ' ' + afterArrow;
 	}
 
-	const tokens = currentName.split(' ').map((t) => t.trim()).filter(Boolean);
+	const tokens = currentName
+		.split(' ')
+		.map((t) => t.trim())
+		.filter(Boolean);
 	let firstName = '';
 	let middleName = '';
 	let lastName = '';
@@ -185,7 +240,12 @@ for (const raw of rawPeople) {
 		lastName = tokens.slice(2).join(' ') || '';
 	} else if (tokens.length === 2) {
 		// Could be "First Last" or "First Patronymic" or "Title Relation"
-		if (tokens[1]?.endsWith('ович') || tokens[1]?.endsWith('івна') || tokens[1]?.endsWith('евна') || tokens[1]?.endsWith('ївна')) {
+		if (
+			tokens[1]?.endsWith('ович') ||
+			tokens[1]?.endsWith('івна') ||
+			tokens[1]?.endsWith('евна') ||
+			tokens[1]?.endsWith('ївна')
+		) {
 			firstName = tokens[0] || '';
 			middleName = tokens[1] || '';
 		} else {
@@ -249,8 +309,12 @@ const unions = [];
 
 for (const juncId of junctions) {
 	const juncCell = cells.get(juncId);
-	const incoming = edges.filter((e) => e.target === juncId && personMap.has(e.source)).map((e) => e.source);
-	const outgoing = edges.filter((e) => e.source === juncId && personMap.has(e.target)).map((e) => e.target);
+	const incoming = edges
+		.filter((e) => e.target === juncId && personMap.has(e.source))
+		.map((e) => e.source);
+	const outgoing = edges
+		.filter((e) => e.source === juncId && personMap.has(e.target))
+		.map((e) => e.target);
 
 	// Spouses
 	if (incoming.length >= 2) {

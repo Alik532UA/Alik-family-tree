@@ -29,4 +29,3 @@ describe('Theme Controller Constants', () => {
 		expect(colorSchemeFor('sepia')).toBe('only light');
 	});
 });
-

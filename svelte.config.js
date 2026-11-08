@@ -15,7 +15,10 @@ const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 
 function commit() {
 	if (process.env.GITHUB_SHA) return process.env.GITHUB_SHA.slice(0, 7);
 	try {
-		return execSync('git rev-parse --short HEAD', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] }).trim();
+		return execSync('git rev-parse --short HEAD', {
+			encoding: 'utf8',
+			stdio: ['pipe', 'pipe', 'ignore']
+		}).trim();
 	} catch {
 		return 'local';
 	}
@@ -31,8 +34,17 @@ const asBrowserSees = (text) => text.replace(/\r\n?/g, '\n');
  */
 const inlineScriptHashes = () => {
 	try {
-		return [...readFileSync(new URL('./src/app.html', import.meta.url), 'utf8').matchAll(/<script\b(?![^>]*\ssrc\s*=)[^>]*>([\s\S]*?)<\/script\s*>/gi)].map(
-			(m) => /** @type {`sha256-${string}`} */ (`sha256-${createHash('sha256').update(asBrowserSees(m[1] ?? '')).digest('base64')}`)
+		return [
+			...readFileSync(new URL('./src/app.html', import.meta.url), 'utf8').matchAll(
+				/<script\b(?![^>]*\ssrc\s*=)[^>]*>([\s\S]*?)<\/script\s*>/gi
+			)
+		].map(
+			(m) =>
+				/** @type {`sha256-${string}`} */ (
+					`sha256-${createHash('sha256')
+						.update(asBrowserSees(m[1] ?? ''))
+						.digest('base64')}`
+				)
 		);
 	} catch {
 		return [];
@@ -44,18 +56,10 @@ const csp = {
 	mode: 'auto',
 	directives: {
 		'default-src': ['self'],
-		'script-src': [
-			'self',
-			...inlineScriptHashes()
-		],
+		'script-src': ['self', ...inlineScriptHashes()],
 		'style-src': ['self', 'unsafe-inline'],
-		'img-src': [
-			'self',
-			'data:'
-		],
-		'connect-src': [
-			'self'
-		],
+		'img-src': ['self', 'data:'],
+		'connect-src': ['self'],
 		'object-src': ['none'],
 		'base-uri': ['self'],
 		'form-action': ['self']
@@ -78,4 +82,3 @@ const config = {
 };
 
 export default config;
-

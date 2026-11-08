@@ -24,6 +24,26 @@ export class TreeViewportController {
 	dimUnrelated = $state<boolean>(true);
 	hoveredUnion = $state<FamilyUnion | null>(null);
 
+	/** Bounding box of visible canvas area in canvas coordinates for virtualized culling and performance scaling */
+	get visibleBounds(): { minX: number; maxX: number; minY: number; maxY: number } {
+		const minX = -this.panX / this.scale;
+		const minY = -this.panY / this.scale;
+		const maxX = (this.containerWidth - this.panX) / this.scale;
+		const maxY = (this.containerHeight - this.panY) / this.scale;
+		return { minX, maxX, minY, maxY };
+	}
+
+	/** Fast viewport visibility test with buffer margin for infinite tree scalability */
+	isCardInViewport(x: number, y: number, width: number, height: number, margin = 800): boolean {
+		const bounds = this.visibleBounds;
+		return (
+			x + width >= bounds.minX - margin &&
+			x <= bounds.maxX + margin &&
+			y + height >= bounds.minY - margin &&
+			y <= bounds.maxY + margin
+		);
+	}
+
 	relatedPersonIds = $derived.by<Set<string>>(() => {
 		if (!this.selectedPerson) return new Set();
 		const set = new Set<string>();
@@ -81,7 +101,8 @@ export class TreeViewportController {
 		const targetScale = Math.max(this.scale, 0.85);
 		// On wider screens where PersonDrawer is open on the right (~380px),
 		// offset the center to the left so the person sits right in the middle of the unobstructed workspace
-		const visibleWidth = this.containerWidth > 860 ? this.containerWidth - 380 : this.containerWidth;
+		const visibleWidth =
+			this.containerWidth > 860 ? this.containerWidth - 380 : this.containerWidth;
 		const targetX = visibleWidth / 2 - (pos.x + pos.width / 2) * targetScale;
 		const targetY = this.containerHeight / 2 - (pos.y + pos.height / 2) * targetScale;
 
@@ -158,4 +179,3 @@ export class TreeViewportController {
 }
 
 export const treeViewport = new TreeViewportController();
-

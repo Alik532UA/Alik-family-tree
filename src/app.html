@@ -41,9 +41,15 @@
 				try {
 					var data = JSON.parse(meta.getAttribute('content'));
 					var mode = localStorage.getItem(data.key);
-					var paints = Object.prototype.hasOwnProperty.call(data.paints, mode) ? data.paints[mode] : data.paints[data.fallback];
-					var canPaint = matchMedia(data.queries.fine).matches && !matchMedia(data.queries.forced).matches;
-					if (canPaint && (paints === 'always' || (paints === 'wide' && matchMedia(data.queries.wide).matches))) {
+					var paints = Object.prototype.hasOwnProperty.call(data.paints, mode)
+						? data.paints[mode]
+						: data.paints[data.fallback];
+					var canPaint =
+						matchMedia(data.queries.fine).matches && !matchMedia(data.queries.forced).matches;
+					if (
+						canPaint &&
+						(paints === 'always' || (paints === 'wide' && matchMedia(data.queries.wide).matches))
+					) {
 						document.documentElement.classList.add('has-custom-scrollbar');
 					}
 				} catch (e) {}
@@ -54,7 +60,9 @@
 			(function () {
 				try {
 					var can = document.fullscreenEnabled || document.webkitFullscreenEnabled;
-					var standalone = navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches === true;
+					var standalone =
+						navigator.standalone === true ||
+						window.matchMedia('(display-mode: standalone)').matches === true;
 					if (!can && standalone) document.documentElement.classList.add('no-fullscreen');
 				} catch (e) {}
 			})();
@@ -64,4 +72,3 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
-

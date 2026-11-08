@@ -14,7 +14,14 @@
 		aria-label="Легенда позначень древа"
 		title="Легенда та параметри перегляду"
 	>
-		<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+		<svg
+			width="15"
+			height="15"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2.5"
+		>
 			<circle cx="12" cy="12" r="10" />
 			<line x1="12" y1="16" x2="12" y2="12" />
 			<line x1="12" y1="8" x2="12.01" y2="8" />
@@ -60,17 +67,11 @@
 
 			<div class="legend-options">
 				<label class="option-checkbox">
-					<input
-						type="checkbox"
-						bind:checked={treeViewport.dimUnrelated}
-					/>
+					<input type="checkbox" bind:checked={treeViewport.dimUnrelated} />
 					<span>Затемнювати інших</span>
 				</label>
 				<label class="option-checkbox">
-					<input
-						type="checkbox"
-						bind:checked={treeViewport.showConnectionLines}
-					/>
+					<input type="checkbox" bind:checked={treeViewport.showConnectionLines} />
 					<span>Прямі лінії зв'язків</span>
 				</label>
 			</div>
@@ -225,4 +226,3 @@
 		}
 	}
 </style>
-

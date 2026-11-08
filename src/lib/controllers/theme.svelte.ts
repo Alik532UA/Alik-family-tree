@@ -80,4 +80,3 @@ const [getThemeContext, setThemeContext] = createContext<ThemeController>();
 export const getTheme = getThemeContext;
 export const setTheme = setThemeContext;
 export const themeController = new ThemeController();
-

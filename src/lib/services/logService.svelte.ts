@@ -39,4 +39,3 @@ class LogService {
 }
 
 export const logService = new LogService();
-

@@ -52,7 +52,8 @@
 			selectedIndex = (selectedIndex + 1) % Math.max(1, searchResults.length);
 		} else if (event.key === 'ArrowUp') {
 			event.preventDefault();
-			selectedIndex = (selectedIndex - 1 + searchResults.length) % Math.max(1, searchResults.length);
+			selectedIndex =
+				(selectedIndex - 1 + searchResults.length) % Math.max(1, searchResults.length);
 		} else if (event.key === 'Enter') {
 			event.preventDefault();
 			const item = searchResults[selectedIndex];
@@ -67,7 +68,16 @@
 
 <div class="search-bar-container">
 	<div class="search-input-wrapper">
-		<svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+		<svg
+			class="search-icon"
+			width="16"
+			height="16"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg
+		>
 		<input
 			bind:this={inputEl}
 			type="search"
@@ -75,7 +85,9 @@
 			placeholder="Пошук родича (натисніть '/')"
 			bind:value={query}
 			oninput={handleInput}
-			onfocus={() => { if (query.trim()) isOpen = true; }}
+			onfocus={() => {
+				if (query.trim()) isOpen = true;
+			}}
 			aria-label="Пошук родича у древі"
 			aria-haspopup="listbox"
 			aria-autocomplete="list"
@@ -84,10 +96,21 @@
 			<button
 				type="button"
 				class="clear-query-btn"
-				onclick={() => { query = ''; isOpen = false; }}
+				onclick={() => {
+					query = '';
+					isOpen = false;
+				}}
 				aria-label="Очистити пошук"
 			>
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+				<svg
+					width="14"
+					height="14"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+					><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg
+				>
 			</button>
 		{:else}
 			<kbd class="search-kbd">/</kbd>
@@ -150,7 +173,9 @@
 		border: 1px solid var(--color-border);
 		border-radius: 8px;
 		outline: none;
-		transition: border-color 0.2s, box-shadow 0.2s;
+		transition:
+			border-color 0.2s,
+			box-shadow 0.2s;
 	}
 
 	.search-input:focus {
@@ -261,4 +286,3 @@
 		color: var(--color-accent);
 	}
 </style>
-

@@ -46,7 +46,17 @@
 		>
 			<div class="modal-header">
 				<div class="modal-icon-badge">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path
+							d="M7 11V7a5 5 0 0 1 10 0v4"
+						/></svg
+					>
 				</div>
 				<div class="modal-title-group">
 					<h3 id="privacy-modal-title" class="modal-title">Сімейний доступ</h3>
@@ -58,13 +68,22 @@
 					onclick={() => privacy.closeUnlockModal()}
 					aria-label="Закрити діалог"
 				>
-					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+					<svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.5"
+						><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg
+					>
 				</button>
 			</div>
 
 			<form onsubmit={handleSubmit} class="modal-form">
 				<p class="modal-desc">
-					З метою захисту приватності живих членів родини, точні дати, контакти та особисті замітки доступні лише для членів сім'ї. Введіть родинний код (наприклад, <strong>1975</strong>).
+					З метою захисту приватності живих членів родини, точні дати, контакти та особисті замітки
+					доступні лише для членів сім'ї. Введіть родинний код (наприклад, <strong>1975</strong>).
 				</p>
 
 				<div class="form-group">
@@ -91,12 +110,7 @@
 					>
 						Скасувати
 					</button>
-					<button
-						type="submit"
-						class="btn btn-primary"
-					>
-						Відкрити доступ
-					</button>
+					<button type="submit" class="btn btn-primary"> Відкрити доступ </button>
 				</div>
 			</form>
 		</div>
@@ -126,8 +140,12 @@
 	}
 
 	@keyframes fade-in {
-		from { opacity: 0; }
-		to { opacity: 1; }
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	.privacy-modal-dialog {

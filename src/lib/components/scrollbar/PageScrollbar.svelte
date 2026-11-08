@@ -10,11 +10,7 @@
 
 {#if scrollbar.hidesNative}
 	<!-- Accessible custom scrollbar trigger/track -->
-	<div
-		class="page-scrollbar-container"
-		oncontextmenu={handleContextMenu}
-		aria-hidden="true"
-	>
+	<div class="page-scrollbar-container" oncontextmenu={handleContextMenu} aria-hidden="true">
 		<!-- Thumb is handled natively or via custom styling in CSS -->
 	</div>
 {/if}
@@ -31,4 +27,3 @@
 		background: transparent;
 	}
 </style>
-

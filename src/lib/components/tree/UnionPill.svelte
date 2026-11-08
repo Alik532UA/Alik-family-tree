@@ -68,7 +68,10 @@
 		outline: none !important;
 		-webkit-tap-highlight-color: transparent;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-		transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+		transition:
+			transform 0.15s ease,
+			box-shadow 0.15s ease,
+			border-color 0.15s ease;
 		z-index: 20;
 	}
 
@@ -129,8 +132,13 @@
 	}
 
 	@keyframes tooltip-fade {
-		from { opacity: 0; transform: translate(-50%, 4px); }
-		to { opacity: 1; transform: translate(-50%, 0); }
+		from {
+			opacity: 0;
+			transform: translate(-50%, 4px);
+		}
+		to {
+			opacity: 1;
+			transform: translate(-50%, 0);
+		}
 	}
 </style>
-

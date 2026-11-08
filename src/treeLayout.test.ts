@@ -1,5 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { treeLayout, createOrthogonalPath, createCornerPath } from '$lib/controllers/treeLayout.svelte';
+import {
+	treeLayout,
+	createOrthogonalPath,
+	createCornerPath
+} from '$lib/controllers/treeLayout.svelte';
 
 describe('TreeLayout Controller', () => {
 	it('computes positions for all 183 persons', () => {
@@ -83,4 +87,3 @@ describe('TreeLayout Controller', () => {
 		expect(resetPos!.x).toBe(initialX);
 	});
 });
-

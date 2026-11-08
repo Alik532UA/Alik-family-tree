@@ -14,7 +14,7 @@
 		{ gen: 8, label: 'Покоління 8', note: 'Сучасне (Алік)', y: 2077 }
 	];
 
-	function selectGeneration(g: typeof generations[number]) {
+	function selectGeneration(g: (typeof generations)[number]) {
 		treeViewport.activeGeneration = g.gen;
 		// Find people in this generation
 		const peopleInGen = familyTreeData.people.filter((p) => p.generation === g.gen);
@@ -113,4 +113,3 @@
 		}
 	}
 </style>
-
