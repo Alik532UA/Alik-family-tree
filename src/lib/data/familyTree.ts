@@ -61,7 +61,9 @@ export interface FamilyTreeData {
 import rawData from './familyTree.json';
 
 export const familyTreeData = rawData as FamilyTreeData;
-export const peopleById = new Map<string, Person>(familyTreeData.people.map((p) => [p.id, p]));
+export const peopleById = new Map<string, Person>(
+	familyTreeData.people.map((p) => [p.id, p])
+);
 export const unionsById = new Map<string, FamilyUnion>(
 	(familyTreeData.unions || []).map((u) => [u.id, u])
 );
