@@ -21,7 +21,7 @@ test.describe('Alik-family-tree E2E Tests', () => {
 	});
 
 	test('directory page displays persons and supports search filtering', async ({ page }) => {
-		await page.goto(`${BASE}/directory`);
+		await page.goto(`${BASE}/directory/`);
 		await expect(page).toHaveTitle(/Каталог/i);
 
 		const searchInput = page.locator('input[type="search"], input[placeholder*="Пошук"]');
@@ -39,7 +39,7 @@ test.describe('Alik-family-tree E2E Tests', () => {
 	});
 
 	test('stats page renders demographics and branch statistics', async ({ page }) => {
-		await page.goto(`${BASE}/stats`);
+		await page.goto(`${BASE}/stats/`);
 		await expect(page).toHaveTitle(/Статистика/i);
 
 		const heading = page.locator('h1');
@@ -51,7 +51,7 @@ test.describe('Alik-family-tree E2E Tests', () => {
 	});
 
 	test('about page renders archive information and sources', async ({ page }) => {
-		await page.goto(`${BASE}/about`);
+		await page.goto(`${BASE}/about/`);
 		await expect(page).toHaveTitle(/Про проєкт/i);
 
 		const heading = page.locator('h1');
