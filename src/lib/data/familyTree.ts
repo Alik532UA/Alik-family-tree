@@ -28,6 +28,15 @@ export interface Person {
 	siblings: string[];
 }
 
+export interface FamilyUnion {
+	id: string;
+	spouses: string[];
+	children: string[];
+	spouseNames: string[];
+	childrenNames: string[];
+	svgCoords: SvgCoords;
+}
+
 export interface FamilyTreeMeta {
 	version: string;
 	updatedAt: string;
@@ -45,6 +54,7 @@ export interface FamilyTreeMeta {
 export interface FamilyTreeData {
 	meta: FamilyTreeMeta;
 	people: Person[];
+	unions: FamilyUnion[];
 }
 
 import rawData from './familyTree.json';
@@ -52,4 +62,7 @@ import rawData from './familyTree.json';
 export const familyTreeData = rawData as FamilyTreeData;
 export const peopleById = new Map<string, Person>(
 	familyTreeData.people.map((p) => [p.id, p])
+);
+export const unionsById = new Map<string, FamilyUnion>(
+	(familyTreeData.unions || []).map((u) => [u.id, u])
 );

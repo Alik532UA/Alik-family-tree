@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2023.02.05",
-    "updatedAt": "2026-11-08T10:09:50.167Z",
+    "updatedAt": "2026-11-08T10:47:22.057Z",
     "totalPeople": 183,
     "totalGenerations": 8,
     "canvasSize": {
@@ -6420,6 +6420,1924 @@
       "spouses": [],
       "children": [],
       "siblings": []
+    }
+  ],
+  "unions": [
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-23",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-4",
+        "OPFhqzpYQ7s1dcnbn2dE-7"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-19"
+      ],
+      "spouseNames": [
+        "Марія Миколаївна Соколовська",
+        "Іван Константинович Булат"
+      ],
+      "childrenNames": [
+        "Ольга Іванівна Запольнова"
+      ],
+      "svgCoords": {
+        "x": 10930,
+        "y": 917,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-26",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-19",
+        "OPFhqzpYQ7s1dcnbn2dE-28"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-24"
+      ],
+      "spouseNames": [
+        "Ольга Іванівна Запольнова",
+        "Ігор Веніаминович Запольнов"
+      ],
+      "childrenNames": [
+        "Алік Ігорович Запольнов"
+      ],
+      "svgCoords": {
+        "x": 7585,
+        "y": 2022,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-32",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-4",
+        "OPFhqzpYQ7s1dcnbn2dE-30"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-21"
+      ],
+      "spouseNames": [
+        "Марія Миколаївна Соколовська",
+        "Олександр Порфирович Кульчицкий"
+      ],
+      "childrenNames": [
+        "Тетяна Олександрівна Сокур"
+      ],
+      "svgCoords": {
+        "x": 11160,
+        "y": 912,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-37",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-34",
+        "OPFhqzpYQ7s1dcnbn2dE-39"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-28",
+        "OPFhqzpYQ7s1dcnbn2dE-41"
+      ],
+      "spouseNames": [
+        "Віра Федорівна &nbsp;Запольнова",
+        "Веніамин Олександрович Запольнов"
+      ],
+      "childrenNames": [
+        "Ігор Веніаминович Запольнов",
+        "Ольга Веніаминовна Запольнова"
+      ],
+      "svgCoords": {
+        "x": 2845,
+        "y": 937,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-43",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-41",
+        "OPFhqzpYQ7s1dcnbn2dE-45"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-46"
+      ],
+      "spouseNames": [
+        "Ольга Веніаминовна Запольнова",
+        "Ігор Голубов"
+      ],
+      "childrenNames": [
+        "Славік Ігоревич Голубов"
+      ],
+      "svgCoords": {
+        "x": 2605,
+        "y": 1052,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-54",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-48",
+        "OPFhqzpYQ7s1dcnbn2dE-50"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-4",
+        "OPFhqzpYQ7s1dcnbn2dE-246",
+        "OPFhqzpYQ7s1dcnbn2dE-251"
+      ],
+      "spouseNames": [
+        "Євгенія Василівна Соколовська",
+        "Миколай Тімофійович Соколовський"
+      ],
+      "childrenNames": [
+        "Марія Миколаївна Соколовська",
+        "Михайло Миколайович Соколовський 1939.04.30 - 2006.11.18",
+        "Зінаїда Миколаївна Шестопал 1946.11.13 - 2005.11.06"
+      ],
+      "svgCoords": {
+        "x": 13641,
+        "y": 707,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-61",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-57",
+        "OPFhqzpYQ7s1dcnbn2dE-59"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-50"
+      ],
+      "spouseNames": [
+        "Дарка Енік",
+        "Тимофій Соколовський"
+      ],
+      "childrenNames": [
+        "Миколай Тімофійович Соколовський"
+      ],
+      "svgCoords": {
+        "x": 13600,
+        "y": 522,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-68",
+      "spouses": [],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-57",
+        "OPFhqzpYQ7s1dcnbn2dE-63",
+        "OPFhqzpYQ7s1dcnbn2dE-292",
+        "OPFhqzpYQ7s1dcnbn2dE-364"
+      ],
+      "spouseNames": [],
+      "childrenNames": [
+        "Дарка Енік",
+        "Мария",
+        "Пантелеймон",
+        "Юхіма"
+      ],
+      "svgCoords": {
+        "x": 13680,
+        "y": 232,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-73",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-63",
+        "OPFhqzpYQ7s1dcnbn2dE-70"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-71"
+      ],
+      "spouseNames": [
+        "Мария",
+        "Іван"
+      ],
+      "childrenNames": [
+        "Михайло"
+      ],
+      "svgCoords": {
+        "x": 12910,
+        "y": 486.62,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-78",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-21",
+        "OPFhqzpYQ7s1dcnbn2dE-74"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-79"
+      ],
+      "spouseNames": [
+        "Тетяна Олександрівна Сокур",
+        "Михайло Мішин"
+      ],
+      "childrenNames": [
+        "Софія Михайлівна Мішина"
+      ],
+      "svgCoords": {
+        "x": 11375,
+        "y": 1062,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-85",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-81",
+        "OPFhqzpYQ7s1dcnbn2dE-83"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-74"
+      ],
+      "spouseNames": [
+        "Тамара",
+        "Мішин"
+      ],
+      "childrenNames": [
+        "Михайло Мішин"
+      ],
+      "svgCoords": {
+        "x": 11590,
+        "y": 892,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-88",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-21",
+        "OPFhqzpYQ7s1dcnbn2dE-87"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Тетяна Олександрівна Сокур",
+        "Олександр Кульчицкий"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 11150,
+        "y": 986,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-93",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-90",
+        "OPFhqzpYQ7s1dcnbn2dE-92"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-97",
+        "OPFhqzpYQ7s1dcnbn2dE-139",
+        "OPFhqzpYQ7s1dcnbn2dE-169",
+        "OPFhqzpYQ7s1dcnbn2dE-174",
+        "OPFhqzpYQ7s1dcnbn2dE-48"
+      ],
+      "spouseNames": [
+        "Елена Усова",
+        "Василій Усов"
+      ],
+      "childrenNames": [
+        "Миколай Васильович Усов",
+        "Семен Васильович Усов (Пчеловод)",
+        "Нина Васильевна Цароненко",
+        "Анастасия (жила на мардаровке)",
+        "Євгенія Василівна Соколовська"
+      ],
+      "svgCoords": {
+        "x": 16760,
+        "y": 514.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-98",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-95",
+        "OPFhqzpYQ7s1dcnbn2dE-97"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-102",
+        "OPFhqzpYQ7s1dcnbn2dE-112",
+        "OPFhqzpYQ7s1dcnbn2dE-108",
+        "OPFhqzpYQ7s1dcnbn2dE-126",
+        "OPFhqzpYQ7s1dcnbn2dE-128",
+        "OPFhqzpYQ7s1dcnbn2dE-135"
+      ],
+      "spouseNames": [
+        "Поліна",
+        "Миколай Васильович Усов"
+      ],
+      "childrenNames": [
+        "Михайло (Полковник)",
+        "Олександр Миколайович Усов (Майор, кореспондент) 1938.09.10 -&nbsp; 2005.11.24",
+        "Анна",
+        "Любов",
+        "Віра (приморский бульвар)",
+        "Марія На котовского"
+      ],
+      "svgCoords": {
+        "x": 16500,
+        "y": 742,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-105",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-100",
+        "OPFhqzpYQ7s1dcnbn2dE-102"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-106",
+        "OPFhqzpYQ7s1dcnbn2dE-107"
+      ],
+      "spouseNames": [
+        "Лариса (Білоруска)",
+        "Михайло (Полковник)"
+      ],
+      "childrenNames": [
+        "донька",
+        "донька"
+      ],
+      "svgCoords": {
+        "x": 16080,
+        "y": 942,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-114",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-110",
+        "OPFhqzpYQ7s1dcnbn2dE-112"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-117"
+      ],
+      "spouseNames": [
+        "Тамара Миколаївна Усова +380487619047 1945.04.18",
+        "Олександр Миколайович Усов (Майор, кореспондент) 1938.09.10 -&nbsp; 2005.11.24"
+      ],
+      "childrenNames": [
+        "Жанна Олександрівна Усова 1970.04.05 МАРШАЛА ЖУКОВА, 10 кв. 49 +380936075990"
+      ],
+      "svgCoords": {
+        "x": 16594,
+        "y": 924.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-121",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-117",
+        "OPFhqzpYQ7s1dcnbn2dE-119"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-124"
+      ],
+      "spouseNames": [
+        "Жанна Олександрівна Усова 1970.04.05 МАРШАЛА ЖУКОВА, 10 кв. 49 +380936075990",
+        "муж війсковий дім на Теністій"
+      ],
+      "childrenNames": [
+        "син"
+      ],
+      "svgCoords": {
+        "x": 16484,
+        "y": 1099.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-132",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-128",
+        "OPFhqzpYQ7s1dcnbn2dE-130"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-133"
+      ],
+      "spouseNames": [
+        "Віра (приморский бульвар)",
+        "Олег"
+      ],
+      "childrenNames": [
+        "Син Ремонт телевизори"
+      ],
+      "svgCoords": {
+        "x": 17360,
+        "y": 930.75,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-143",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-137",
+        "OPFhqzpYQ7s1dcnbn2dE-139"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-145",
+        "OPFhqzpYQ7s1dcnbn2dE-149",
+        "OPFhqzpYQ7s1dcnbn2dE-154"
+      ],
+      "spouseNames": [
+        "Віра",
+        "Семен Васильович Усов (Пчеловод)"
+      ],
+      "childrenNames": [
+        "Миколай Був одружений приблизно 1943",
+        "Галина (Дачная)",
+        "Аня Дачное"
+      ],
+      "svgCoords": {
+        "x": 18775,
+        "y": 782,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-152",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-149"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-160",
+        "OPFhqzpYQ7s1dcnbn2dE-165"
+      ],
+      "spouseNames": [
+        "Галина (Дачная)"
+      ],
+      "childrenNames": [
+        "син",
+        "донька"
+      ],
+      "svgCoords": {
+        "x": 18670,
+        "y": 941,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-157",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-154"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-164",
+        "OPFhqzpYQ7s1dcnbn2dE-163"
+      ],
+      "spouseNames": [
+        "Аня Дачное"
+      ],
+      "childrenNames": [
+        "син війсковий",
+        "син"
+      ],
+      "svgCoords": {
+        "x": 19040,
+        "y": 942,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-167",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-145"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Миколай Був одружений приблизно 1943"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 18310,
+        "y": 927,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-172",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-169",
+        "OPFhqzpYQ7s1dcnbn2dE-171"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Нина Васильевна Цароненко",
+        "Валисий Іванович Цароненко (електрик)"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 20005,
+        "y": 757,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-178",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-174",
+        "OPFhqzpYQ7s1dcnbn2dE-176"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-182"
+      ],
+      "spouseNames": [
+        "Анастасия (жила на мардаровке)",
+        "Леонтий (Соединял дерев&#39;я, Пчеловод)"
+      ],
+      "childrenNames": [
+        "Антон (ім&#39;я Тоня) Железнодорожник, на путях"
+      ],
+      "svgCoords": {
+        "x": 20445,
+        "y": 772,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-186",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-180",
+        "OPFhqzpYQ7s1dcnbn2dE-182"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-187",
+        "OPFhqzpYQ7s1dcnbn2dE-191",
+        "OPFhqzpYQ7s1dcnbn2dE-197"
+      ],
+      "spouseNames": [
+        "Віра",
+        "Антон (ім&#39;я Тоня) Железнодорожник, на путях"
+      ],
+      "childrenNames": [
+        "Марія Професія ревізор (у рейсі) Рік бика",
+        "Василь (Моряк)",
+        "Віктор"
+      ],
+      "svgCoords": {
+        "x": 20540,
+        "y": 922,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-193",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-191"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-201"
+      ],
+      "spouseNames": [
+        "Василь (Моряк)"
+      ],
+      "childrenNames": [
+        "донька"
+      ],
+      "svgCoords": {
+        "x": 20665,
+        "y": 1062,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-199",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-197"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-200"
+      ],
+      "spouseNames": [
+        "Віктор"
+      ],
+      "childrenNames": [
+        "Син Війсковий"
+      ],
+      "svgCoords": {
+        "x": 21025,
+        "y": 1062,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-214",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-203",
+        "OPFhqzpYQ7s1dcnbn2dE-205"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-528",
+        "OPFhqzpYQ7s1dcnbn2dE-524",
+        "OPFhqzpYQ7s1dcnbn2dE-518",
+        "OPFhqzpYQ7s1dcnbn2dE-508",
+        "OPFhqzpYQ7s1dcnbn2dE-491",
+        "OPFhqzpYQ7s1dcnbn2dE-501",
+        "OPFhqzpYQ7s1dcnbn2dE-485",
+        "OPFhqzpYQ7s1dcnbn2dE-477",
+        "OPFhqzpYQ7s1dcnbn2dE-7"
+      ],
+      "spouseNames": [
+        "Анна",
+        "Констянтин Булат (світлий)"
+      ],
+      "childrenNames": [
+        "Іван",
+        "Лена",
+        "Олександра",
+        "Павел",
+        "Василій",
+        "Ліза",
+        "Надя",
+        "Мариця",
+        "Іван Константинович Булат"
+      ],
+      "svgCoords": {
+        "x": 8879.5,
+        "y": 554.12,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-220",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-217",
+        "OPFhqzpYQ7s1dcnbn2dE-222"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-228",
+        "OPFhqzpYQ7s1dcnbn2dE-39"
+      ],
+      "spouseNames": [
+        "Наталка Онуфріївна Запольнова",
+        "Олександр Петрович Запольнов 1905.06.01 - 1992.04.04"
+      ],
+      "childrenNames": [
+        "Альберт Олександрович Запольнов 1937.07.16",
+        "Веніамин Олександрович Запольнов"
+      ],
+      "svgCoords": {
+        "x": 1305,
+        "y": 767,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-226",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-224",
+        "OPFhqzpYQ7s1dcnbn2dE-228"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-236"
+      ],
+      "spouseNames": [
+        "Лариса 1943.08.15",
+        "Альберт Олександрович Запольнов 1937.07.16"
+      ],
+      "childrenNames": [
+        "Володимир Альбертович Запольнов 1966.04.04"
+      ],
+      "svgCoords": {
+        "x": 705,
+        "y": 930.75,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-233",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-230",
+        "OPFhqzpYQ7s1dcnbn2dE-236"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-241",
+        "OPFhqzpYQ7s1dcnbn2dE-580"
+      ],
+      "spouseNames": [
+        "Надія Вікторівна &nbsp;Запольнова",
+        "Володимир Альбертович Запольнов 1966.04.04"
+      ],
+      "childrenNames": [
+        "Володимир Володимирович Запольнов",
+        "Таісія Володимировна Запольнова"
+      ],
+      "svgCoords": {
+        "x": 825,
+        "y": 1087,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-240",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-236",
+        "OPFhqzpYQ7s1dcnbn2dE-238"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-242"
+      ],
+      "spouseNames": [
+        "Володимир Альбертович Запольнов 1966.04.04",
+        "Світлана"
+      ],
+      "childrenNames": [
+        "Ірина Володимировна Запольнова 1990.06.28"
+      ],
+      "svgCoords": {
+        "x": 580,
+        "y": 1102,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-249",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-244",
+        "OPFhqzpYQ7s1dcnbn2dE-246"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-281",
+        "OPFhqzpYQ7s1dcnbn2dE-287"
+      ],
+      "spouseNames": [
+        "Галіна Кирилівна",
+        "Михайло Миколайович Соколовський 1939.04.30 - 2006.11.18"
+      ],
+      "childrenNames": [
+        "Юрій Михайлович Соколовський 1963.06.29 - 2004.08.11",
+        "Володимир Михайлович Соколовський 1970.04.05"
+      ],
+      "svgCoords": {
+        "x": 13735,
+        "y": 942,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-256",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-251",
+        "OPFhqzpYQ7s1dcnbn2dE-253"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-258",
+        "OPFhqzpYQ7s1dcnbn2dE-265"
+      ],
+      "spouseNames": [
+        "Зінаїда Миколаївна Шестопал 1946.11.13 - 2005.11.06",
+        "Петро Шестопал 1939 - 1979"
+      ],
+      "childrenNames": [
+        "Ірина Шестопал",
+        "Елена Шестопал 1966.06.30"
+      ],
+      "svgCoords": {
+        "x": 14785,
+        "y": 944.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-263",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-258",
+        "OPFhqzpYQ7s1dcnbn2dE-260"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-271",
+        "OPFhqzpYQ7s1dcnbn2dE-272"
+      ],
+      "spouseNames": [
+        "Ірина Шестопал",
+        "Андрій Буличов"
+      ],
+      "childrenNames": [
+        "Микита Буличов",
+        "Денис Шестопал"
+      ],
+      "svgCoords": {
+        "x": 14504,
+        "y": 1074.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-283",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-279",
+        "OPFhqzpYQ7s1dcnbn2dE-281"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-290"
+      ],
+      "spouseNames": [
+        "Світлана Іванівна 0000.06.20 - 2020.03.12",
+        "Юрій Михайлович Соколовський 1963.06.29 - 2004.08.11"
+      ],
+      "childrenNames": [
+        "Ана Соколовська"
+      ],
+      "svgCoords": {
+        "x": 13555,
+        "y": 1114.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-289",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-285",
+        "OPFhqzpYQ7s1dcnbn2dE-287"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-291"
+      ],
+      "spouseNames": [
+        "Оксана Вікторівна",
+        "Володимир Михайлович Соколовський 1970.04.05"
+      ],
+      "childrenNames": [
+        "Максим Володимирович Соколовський"
+      ],
+      "svgCoords": {
+        "x": 13955,
+        "y": 1110.75,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-296",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-57",
+        "OPFhqzpYQ7s1dcnbn2dE-294"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-298"
+      ],
+      "spouseNames": [
+        "Дарка Енік",
+        "Михайло Парчик"
+      ],
+      "childrenNames": [
+        "Мария Парчик Михайловна"
+      ],
+      "svgCoords": {
+        "x": 13775,
+        "y": 522,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-301",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-298",
+        "OPFhqzpYQ7s1dcnbn2dE-300"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Мария Парчик Михайловна",
+        "Василь Тихонович"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 14110,
+        "y": 779.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-306",
+      "spouses": [],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-171",
+        "OPFhqzpYQ7s1dcnbn2dE-304"
+      ],
+      "spouseNames": [],
+      "childrenNames": [
+        "Валисий Іванович Цароненко (електрик)",
+        "Нина Івановна // вчителька навчальних класів"
+      ],
+      "svgCoords": {
+        "x": 19750,
+        "y": 649.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-311",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-7",
+        "OPFhqzpYQ7s1dcnbn2dE-309"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-313"
+      ],
+      "spouseNames": [
+        "Іван Константинович Булат",
+        "Валентина Дмитрівна Булат 1938.01.31 - 1995.10.18"
+      ],
+      "childrenNames": [
+        "Олена Іванівна &nbsp;Семакіна 1958.09.21 - 2002.01.13"
+      ],
+      "svgCoords": {
+        "x": 10545,
+        "y": 942,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-314",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-265",
+        "OPFhqzpYQ7s1dcnbn2dE-267"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-277",
+        "OPFhqzpYQ7s1dcnbn2dE-275",
+        "OPFhqzpYQ7s1dcnbn2dE-273"
+      ],
+      "spouseNames": [
+        "Елена Шестопал 1966.06.30",
+        "Віктор - 2007"
+      ],
+      "childrenNames": [
+        "Євгенія",
+        "Анна",
+        "Сергій"
+      ],
+      "svgCoords": {
+        "x": 15385,
+        "y": 1100.75,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-325",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-316",
+        "OPFhqzpYQ7s1dcnbn2dE-320"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-318"
+      ],
+      "spouseNames": [
+        "Юрій Іванович Семакін 1926.10.01 - 2004.03.14",
+        "Валентина Філіповна"
+      ],
+      "childrenNames": [
+        "Олег Юрійович Семакін"
+      ],
+      "svgCoords": {
+        "x": 10150,
+        "y": 947,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-327",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-313",
+        "OPFhqzpYQ7s1dcnbn2dE-318"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-323"
+      ],
+      "spouseNames": [
+        "Олена Іванівна &nbsp;Семакіна 1958.09.21 - 2002.01.13",
+        "Олег Юрійович Семакін"
+      ],
+      "childrenNames": [
+        "Андрій Олегович Семакін"
+      ],
+      "svgCoords": {
+        "x": 10395,
+        "y": 1102,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-330",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-323"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Андрій Олегович Семакін"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 10266.5,
+        "y": 1232,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-334",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-323"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Андрій Олегович Семакін"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 10510,
+        "y": 1312,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-339",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-627",
+        "OPFhqzpYQ7s1dcnbn2dE-629"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-34",
+        "OPFhqzpYQ7s1dcnbn2dE-341"
+      ],
+      "spouseNames": [
+        "Alexandra Mîndru",
+        "Teodor Mîndru"
+      ],
+      "childrenNames": [
+        "Віра Федорівна &nbsp;Запольнова",
+        "Тамара 1937.08.05 - 2018.05.18"
+      ],
+      "svgCoords": {
+        "x": 3675,
+        "y": 782,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-347",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-341",
+        "OPFhqzpYQ7s1dcnbn2dE-343"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-354",
+        "OPFhqzpYQ7s1dcnbn2dE-618"
+      ],
+      "spouseNames": [
+        "Тамара 1937.08.05 - 2018.05.18",
+        "Михайло Стомік"
+      ],
+      "childrenNames": [
+        "Альоша 1960.11.10",
+        "Татьяна"
+      ],
+      "svgCoords": {
+        "x": 3560,
+        "y": 944.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-353",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-349",
+        "OPFhqzpYQ7s1dcnbn2dE-354"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Наталля 1961.05.26",
+        "Альоша 1960.11.10"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 3775,
+        "y": 1085.75,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-362",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-358",
+        "OPFhqzpYQ7s1dcnbn2dE-360"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-285"
+      ],
+      "spouseNames": [
+        "Тамара",
+        "Віктор"
+      ],
+      "childrenNames": [
+        "Оксана Вікторівна"
+      ],
+      "svgCoords": {
+        "x": 14035,
+        "y": 944.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-369",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-364"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Юхіма"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 12545,
+        "y": 486.62,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-373",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-304"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Нина Івановна // вчителька навчальних класів"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 19510,
+        "y": 782,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-380",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-135"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Марія На котовского"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 17800,
+        "y": 937,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-390",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-126",
+        "OPFhqzpYQ7s1dcnbn2dE-388"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-391"
+      ],
+      "spouseNames": [
+        "Любов",
+        "Олег"
+      ],
+      "childrenNames": [
+        "Світлана працювала офіціанткой"
+      ],
+      "svgCoords": {
+        "x": 16970,
+        "y": 932,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-395",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-117"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-123"
+      ],
+      "spouseNames": [
+        "Жанна Олександрівна Усова 1970.04.05 МАРШАЛА ЖУКОВА, 10 кв. 49 +380936075990"
+      ],
+      "childrenNames": [
+        "син"
+      ],
+      "svgCoords": {
+        "x": 16690,
+        "y": 1102,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-400",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-123"
+      ],
+      "children": [],
+      "spouseNames": [
+        "син"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 16784,
+        "y": 1262,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-408",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-277"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-414",
+        "OPFhqzpYQ7s1dcnbn2dE-416",
+        "OPFhqzpYQ7s1dcnbn2dE-415"
+      ],
+      "spouseNames": [
+        "Євгенія"
+      ],
+      "childrenNames": [
+        "Наталья",
+        "Дмитро",
+        "Павло"
+      ],
+      "svgCoords": {
+        "x": 14930,
+        "y": 1277,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-411",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-275",
+        "OPFhqzpYQ7s1dcnbn2dE-404"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-413",
+        "OPFhqzpYQ7s1dcnbn2dE-412"
+      ],
+      "spouseNames": [
+        "Анна",
+        "Ярослав (Ростік)"
+      ],
+      "childrenNames": [
+        "Артемон",
+        "Олексанра"
+      ],
+      "svgCoords": {
+        "x": 15290,
+        "y": 1277,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-423",
+      "spouses": [],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-59"
+      ],
+      "spouseNames": [],
+      "childrenNames": [
+        "Тимофій Соколовський"
+      ],
+      "svgCoords": {
+        "x": 13410,
+        "y": 332,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-425",
+      "spouses": [],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-418"
+      ],
+      "spouseNames": [],
+      "childrenNames": [
+        "Філіп"
+      ],
+      "svgCoords": {
+        "x": 13245,
+        "y": 516.62,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-431",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-418",
+        "OPFhqzpYQ7s1dcnbn2dE-427"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-432",
+        "OPFhqzpYQ7s1dcnbn2dE-434",
+        "OPFhqzpYQ7s1dcnbn2dE-436"
+      ],
+      "spouseNames": [
+        "Філіп",
+        "Наташа"
+      ],
+      "childrenNames": [
+        "Наташа",
+        "Рая +380487211678 +380487498970",
+        "Ольга"
+      ],
+      "svgCoords": {
+        "x": 13195,
+        "y": 750.12,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-450",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-436",
+        "OPFhqzpYQ7s1dcnbn2dE-441"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-439",
+        "OPFhqzpYQ7s1dcnbn2dE-437"
+      ],
+      "spouseNames": [
+        "Ольга",
+        "Валерій"
+      ],
+      "childrenNames": [
+        "Марія",
+        "Дмитро"
+      ],
+      "svgCoords": {
+        "x": 12419.5,
+        "y": 893.87,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-453",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-439"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Марія"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 12095,
+        "y": 1045.75,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-461",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-458",
+        "OPFhqzpYQ7s1dcnbn2dE-437"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Ларіса",
+        "Дмитро"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 12522.5,
+        "y": 1041.38,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-465",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-434"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Рая +380487211678 +380487498970"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 12960,
+        "y": 900.12,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-466",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-458"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Ларіса"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 12735,
+        "y": 1045.12,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-481",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-475",
+        "OPFhqzpYQ7s1dcnbn2dE-477"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-534",
+        "OPFhqzpYQ7s1dcnbn2dE-535"
+      ],
+      "spouseNames": [
+        "Георгій",
+        "Мариця"
+      ],
+      "childrenNames": [
+        "Георгіна Сан-Пітербург",
+        "Елена"
+      ],
+      "svgCoords": {
+        "x": 4550,
+        "y": 932,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-489",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-483",
+        "OPFhqzpYQ7s1dcnbn2dE-485"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-538",
+        "OPFhqzpYQ7s1dcnbn2dE-537",
+        "OPFhqzpYQ7s1dcnbn2dE-540"
+      ],
+      "spouseNames": [
+        "Георгій",
+        "Надя"
+      ],
+      "childrenNames": [
+        "Валерій",
+        "Ніна, Ніка",
+        "Наташа +37322779679 -2021.10.27"
+      ],
+      "svgCoords": {
+        "x": 6070,
+        "y": 932,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-497",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-491"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-552"
+      ],
+      "spouseNames": [
+        "Василій"
+      ],
+      "childrenNames": [
+        "Катерина закінчила інститут у Кишеневі"
+      ],
+      "svgCoords": {
+        "x": 7556,
+        "y": 929.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-506",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-499",
+        "OPFhqzpYQ7s1dcnbn2dE-501"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-556",
+        "OPFhqzpYQ7s1dcnbn2dE-557",
+        "OPFhqzpYQ7s1dcnbn2dE-558",
+        "OPFhqzpYQ7s1dcnbn2dE-555"
+      ],
+      "spouseNames": [
+        "Василій",
+        "Ліза"
+      ],
+      "childrenNames": [
+        "Женя",
+        "Ваня",
+        "Михаїл пастух, ферма овець",
+        "Марія"
+      ],
+      "svgCoords": {
+        "x": 6785,
+        "y": 897,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-514",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-508"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-561"
+      ],
+      "spouseNames": [
+        "Павел"
+      ],
+      "childrenNames": [
+        "Павло"
+      ],
+      "svgCoords": {
+        "x": 8150,
+        "y": 957,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-520",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-518"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Олександра"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 8774,
+        "y": 949.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-526",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-524"
+      ],
+      "children": [],
+      "spouseNames": [
+        "Лена"
+      ],
+      "childrenNames": [],
+      "svgCoords": {
+        "x": 9335,
+        "y": 949.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-533",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-528",
+        "OPFhqzpYQ7s1dcnbn2dE-530"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-571",
+        "OPFhqzpYQ7s1dcnbn2dE-570"
+      ],
+      "spouseNames": [
+        "Іван",
+        "Женя"
+      ],
+      "childrenNames": [
+        "Іван",
+        "Ігор"
+      ],
+      "svgCoords": {
+        "x": 9729,
+        "y": 949.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-546",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-540",
+        "OPFhqzpYQ7s1dcnbn2dE-542"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-544"
+      ],
+      "spouseNames": [
+        "Наташа +37322779679 -2021.10.27",
+        "Валерій"
+      ],
+      "childrenNames": [
+        "Алла +37369173773 +37322565188"
+      ],
+      "svgCoords": {
+        "x": 6270,
+        "y": 1097,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-550",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-544",
+        "OPFhqzpYQ7s1dcnbn2dE-548"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-551"
+      ],
+      "spouseNames": [
+        "Алла +37369173773 +37322565188",
+        "Дмитро"
+      ],
+      "childrenNames": [
+        "Тімур"
+      ],
+      "svgCoords": {
+        "x": 6160,
+        "y": 1297,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-576",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-573",
+        "OPFhqzpYQ7s1dcnbn2dE-578"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-222",
+        "OPFhqzpYQ7s1dcnbn2dE-579"
+      ],
+      "spouseNames": [
+        "Олександра Васильевна",
+        "Петро Степанович Запольнов"
+      ],
+      "childrenNames": [
+        "Олександр Петрович Запольнов 1905.06.01 - 1992.04.04",
+        "Василь Петрович Запольнов 1918 - 1979"
+      ],
+      "svgCoords": {
+        "x": 1016,
+        "y": 589.5,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-584",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-586"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-578"
+      ],
+      "spouseNames": [
+        "Степан Олександрович Запольнов"
+      ],
+      "childrenNames": [
+        "Петро Степанович Запольнов"
+      ],
+      "svgCoords": {
+        "x": 896,
+        "y": 417,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-590",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-592"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-586"
+      ],
+      "spouseNames": [
+        "Олександр Алентивич Запольнов"
+      ],
+      "childrenNames": [
+        "Степан Олександрович Запольнов"
+      ],
+      "svgCoords": {
+        "x": 776,
+        "y": 247,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-596",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-598"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-592"
+      ],
+      "spouseNames": [
+        "Алентій Запольнов"
+      ],
+      "childrenNames": [
+        "Олександр Алентивич Запольнов"
+      ],
+      "svgCoords": {
+        "x": 656,
+        "y": 87,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-608",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-610"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-217",
+        "OPFhqzpYQ7s1dcnbn2dE-630",
+        "OPFhqzpYQ7s1dcnbn2dE-631",
+        "OPFhqzpYQ7s1dcnbn2dE-632",
+        "OPFhqzpYQ7s1dcnbn2dE-633",
+        "OPFhqzpYQ7s1dcnbn2dE-634",
+        "OPFhqzpYQ7s1dcnbn2dE-635"
+      ],
+      "spouseNames": [
+        "Онуфрій 1853 - 1935"
+      ],
+      "childrenNames": [
+        "Наталка Онуфріївна Запольнова",
+        "Дар&#39;я Онуфріївна Трубіна",
+        "Поліна Онуфріївна Трубіна",
+        "Надія Онуфріївна Трубіна",
+        "Марія Онуфріївна Трубіна",
+        "Вались",
+        "Григорій"
+      ],
+      "svgCoords": {
+        "x": 2155,
+        "y": 617,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-614",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-616"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-610"
+      ],
+      "spouseNames": [
+        "Вавилович"
+      ],
+      "childrenNames": [
+        "Онуфрій 1853 - 1935"
+      ],
+      "svgCoords": {
+        "x": 2035,
+        "y": 450.62,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-622",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-618",
+        "OPFhqzpYQ7s1dcnbn2dE-623"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-625",
+        "OPFhqzpYQ7s1dcnbn2dE-624"
+      ],
+      "spouseNames": [
+        "Татьяна",
+        "Боріс"
+      ],
+      "childrenNames": [
+        "Сергій",
+        "Олександр"
+      ],
+      "svgCoords": {
+        "x": 3330,
+        "y": 1093.88,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "id": "OPFhqzpYQ7s1dcnbn2dE-641",
+      "spouses": [
+        "OPFhqzpYQ7s1dcnbn2dE-537",
+        "OPFhqzpYQ7s1dcnbn2dE-636"
+      ],
+      "children": [
+        "OPFhqzpYQ7s1dcnbn2dE-639",
+        "OPFhqzpYQ7s1dcnbn2dE-642",
+        "OPFhqzpYQ7s1dcnbn2dE-643"
+      ],
+      "spouseNames": [
+        "Ніна, Ніка",
+        "Іван"
+      ],
+      "childrenNames": [
+        "Даніїла Балан",
+        "Міхаїла",
+        "Михаї"
+      ],
+      "svgCoords": {
+        "x": 5695,
+        "y": 1095.12,
+        "width": 50,
+        "height": 30
+      }
     }
   ]
 }

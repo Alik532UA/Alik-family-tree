@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import TreeCanvas from '$lib/components/tree/TreeCanvas.svelte';
 	import TreeMinimap from '$lib/components/tree/TreeMinimap.svelte';
+	import TreeLegend from '$lib/components/tree/TreeLegend.svelte';
 	import PersonDrawer from '$lib/components/tree/PersonDrawer.svelte';
 	import GenerationTimeline from '$lib/components/tree/GenerationTimeline.svelte';
 	import { treeViewport } from '$lib/controllers/treeViewport.svelte';
@@ -33,6 +34,9 @@
 
 	<!-- Minimap in bottom-left -->
 	<TreeMinimap />
+
+	<!-- Legend & display toggles -->
+	<TreeLegend />
 
 	<!-- Person profile drawer -->
 	<PersonDrawer

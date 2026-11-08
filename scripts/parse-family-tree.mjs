@@ -231,7 +231,10 @@ for (const raw of rawPeople) {
 }
 
 // Reconstruct family graph from junctions
+const unions = [];
+
 for (const juncId of junctions) {
+	const juncCell = cells.get(juncId);
 	const incoming = edges.filter((e) => e.target === juncId && personMap.has(e.source)).map((e) => e.source);
 	const outgoing = edges.filter((e) => e.source === juncId && personMap.has(e.target)).map((e) => e.target);
 
@@ -270,6 +273,23 @@ for (const juncId of junctions) {
 			}
 		}
 	}
+
+	// If this junction has geometry and connects people, register as union
+	if (juncCell && juncCell.geometry && (incoming.length > 0 || outgoing.length > 0)) {
+		const jx = juncCell.geometry.x ?? 0;
+		const jy = juncCell.geometry.y ?? 0;
+		const jw = juncCell.geometry.width ?? 50;
+		const jh = juncCell.geometry.height ?? 30;
+
+		unions.push({
+			id: juncId,
+			spouses: incoming,
+			children: outgoing,
+			spouseNames: incoming.map((id) => personMap.get(id)?.name).filter(Boolean),
+			childrenNames: outgoing.map((id) => personMap.get(id)?.name).filter(Boolean),
+			svgCoords: { x: jx + OFFSET_X, y: jy + OFFSET_Y, width: jw, height: jh }
+		});
+	}
 }
 
 const people = Array.from(personMap.values());
@@ -299,11 +319,12 @@ const exportData = {
 		generationStats,
 		genderStats
 	},
-	people
+	people,
+	unions
 };
 
 writeFileSync(outJsonPath, JSON.stringify(exportData, null, 2), 'utf8');
-console.log(`✓ Generated ${outJsonPath} with ${people.length} people.`);
+console.log(`✓ Generated ${outJsonPath} with ${people.length} people and ${unions.length} unions.`);
 
 const tsContent = `// Auto-generated from init-base/Генеалогічне древо-2023.02.05
 export interface SvgCoords {
@@ -335,6 +356,15 @@ export interface Person {
 	siblings: string[];
 }
 
+export interface FamilyUnion {
+	id: string;
+	spouses: string[];
+	children: string[];
+	spouseNames: string[];
+	childrenNames: string[];
+	svgCoords: SvgCoords;
+}
+
 export interface FamilyTreeMeta {
 	version: string;
 	updatedAt: string;
@@ -352,6 +382,7 @@ export interface FamilyTreeMeta {
 export interface FamilyTreeData {
 	meta: FamilyTreeMeta;
 	people: Person[];
+	unions: FamilyUnion[];
 }
 
 import rawData from './familyTree.json';
@@ -359,6 +390,9 @@ import rawData from './familyTree.json';
 export const familyTreeData = rawData as FamilyTreeData;
 export const peopleById = new Map<string, Person>(
 	familyTreeData.people.map((p) => [p.id, p])
+);
+export const unionsById = new Map<string, FamilyUnion>(
+	(familyTreeData.unions || []).map((u) => [u.id, u])
 );
 `;
 

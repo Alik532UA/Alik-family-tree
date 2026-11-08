@@ -1,6 +1,6 @@
 // src/lib/controllers/treeViewport.svelte.ts
 import { browser } from '$app/environment';
-import { peopleById, type Person } from '$lib/data/familyTree';
+import { peopleById, type Person, type FamilyUnion } from '$lib/data/familyTree';
 
 export class TreeViewportController {
 	canvasWidth = 21360;
@@ -17,6 +17,22 @@ export class TreeViewportController {
 	highlightedIds = $state<Set<string>>(new Set());
 	activeGeneration = $state<number | null>(null);
 	activeBranch = $state<string | null>(null);
+
+	// UX enhancements
+	showConnectionLines = $state<boolean>(false);
+	dimUnrelated = $state<boolean>(true);
+	hoveredUnion = $state<FamilyUnion | null>(null);
+
+	relatedPersonIds = $derived.by<Set<string>>(() => {
+		if (!this.selectedPerson) return new Set();
+		const set = new Set<string>();
+		set.add(this.selectedPerson.id);
+		for (const id of this.selectedPerson.parents) set.add(id);
+		for (const id of this.selectedPerson.children) set.add(id);
+		for (const id of this.selectedPerson.spouses) set.add(id);
+		for (const id of this.selectedPerson.siblings) set.add(id);
+		return set;
+	});
 
 	isDragging = $state<boolean>(false);
 	private dragStartX = 0;
