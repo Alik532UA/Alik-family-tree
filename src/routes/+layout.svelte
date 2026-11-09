@@ -70,9 +70,11 @@
 	<meta name="scrollbar-first-frame" content={firstFrame(STORAGE_PREFIX)} />
 </svelte:head>
 
+<a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
+
 <div class="site-app-wrapper">
 	<SiteHeader />
-	<main class="site-main-content">
+	<main id="main-content" class="site-main-content" tabindex="-1">
 		<svelte:boundary
 			onerror={(error) =>
 				logService.error('app', 'Render boundary caught error', { error: String(error) })}
@@ -93,6 +95,25 @@
 <PrivacyModal />
 
 <style>
+	.skip-link {
+		position: absolute;
+		top: -9999px;
+		left: 16px;
+		background: var(--color-primary, #3b82f6);
+		color: #ffffff;
+		padding: 10px 16px;
+		border-radius: 8px;
+		font-weight: 700;
+		text-decoration: none;
+		z-index: 99999;
+		transition: top 0.2s ease;
+	}
+
+	.skip-link:focus {
+		top: 16px;
+		outline: 3px solid #f59e0b;
+	}
+
 	.site-app-wrapper {
 		display: flex;
 		flex-direction: column;
