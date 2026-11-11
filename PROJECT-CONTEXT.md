@@ -22,7 +22,7 @@
 | ------------------------------------- | --------------------------------------------------------------------------- |
 | Профіль розгортання                   | `static` (`@sveltejs/adapter-static`)                                       |
 | Хостинг                               | GitHub Pages                                                                |
-| Основна адреса                        | `https://alik532ua.github.io/Alik-family-tree/`                              |
+| Основна адреса                        | `https://alik532ua.github.io/Alik-family-tree/`                             |
 | Базовий шлях (`BASE_PATH`)            | `/Alik-family-tree` (порожній при власному домені)                          |
 | Спільний origin з іншими застосунками | Так (`https://alik532ua.github.io`)                                         |
 | Гілка деплою                          | `main`                                                                      |
@@ -141,21 +141,21 @@
 
 ## 9. Опціональні критерії інженерного та продуктового пакетів
 
-| Критерій | Застосовано | Причина / Локація |
-| :--- | :---: | :--- |
-| **I18N** | Частково | Основна мова `uk`; структура підготовлена для мультимовного розширення |
-| **DEPENDENCIES** | Так | Суворий lockfile, Dependabot, `audit:ci` |
-| **VERSIONING** | Так | Версія `__APP_VERSION__`, `scripts/bump-version.mjs` |
-| **ACCESSIBILITY** | Так | `src/a11y.test.ts`, фокус-пастки, `prefers-reduced-motion` |
-| **STORAGE-NAMESPACE** | Так | Префікс `alik_tree_`, `src/lib/services/storage.ts` |
-| **ERROR-HANDLING** | Так | `<svelte:boundary>`, stale-build захист у `hooks.client.ts` |
-| **SEARCH-SCALABILITY** | Так | Віртуалізація в `src/searchAndScalability.test.ts`, індексація |
+| Критерій               | Застосовано | Причина / Локація                                                      |
+| :--------------------- | :---------: | :--------------------------------------------------------------------- |
+| **I18N**               |  Частково   | Основна мова `uk`; структура підготовлена для мультимовного розширення |
+| **DEPENDENCIES**       |     Так     | Суворий lockfile, Dependabot, `audit:ci`                               |
+| **VERSIONING**         |     Так     | Версія `__APP_VERSION__`, `scripts/bump-version.mjs`                   |
+| **ACCESSIBILITY**      |     Так     | `src/a11y.test.ts`, фокус-пастки, `prefers-reduced-motion`             |
+| **STORAGE-NAMESPACE**  |     Так     | Префікс `alik_tree_`, `src/lib/services/storage.ts`                    |
+| **ERROR-HANDLING**     |     Так     | `<svelte:boundary>`, stale-build захист у `hooks.client.ts`            |
+| **SEARCH-SCALABILITY** |     Так     | Віртуалізація в `src/searchAndScalability.test.ts`, індексація         |
 
 ---
 
 ## 10. Свідомі відхилення від канону
 
 1. **Повна попередня компіляція графа на етапі збірки (`data:parse`)**:
-   - *Причина*: Відмова від клієнтського парсингу важких архівних XML/Draw.io файлів скорочує First Contentful Paint (FCP) до < 150мс.
+   - _Причина_: Відмова від клієнтського парсингу важких архівних XML/Draw.io файлів скорочує First Contentful Paint (FCP) до < 150мс.
 2. **Сесійний PIN замість серверної авторизації**:
-   - *Причина*: Збереження повної статичної незалежності GitHub Pages без потреби в базі даних користувачів.
+   - _Причина_: Збереження повної статичної незалежності GitHub Pages без потреби в базі даних користувачів.
