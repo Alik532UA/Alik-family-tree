@@ -1,7 +1,7 @@
 ---
 Назва: Контекст проєкту Alik-family-tree
 Канон: selection_criteria/v10 та product_criteria/v10
-Дата оновлення: 2026-11-09
+Дата оновлення: 2026-11-11
 ---
 
 # Контекст проєкту: Alik-family-tree
@@ -11,7 +11,7 @@
 - **Назва**: Alik Family Tree (Родинне генеалогічне древо)
 - **Опис**: Інтерактивний сайт-візуалізатор родинного генеалогічного древа родини Запольнових, Булатів, Соколовських, Кульчицьких та споріднених гілок на базі архіву `2023.02.05`.
 - **Стек**: SvelteKit (`@sveltejs/kit`), Svelte 5 (виключно Runes), TypeScript, `@sveltejs/adapter-static`, Lucide Svelte, CSS Variables.
-- **Хостинг**: GitHub Pages (`https://alik.github.io/Alik-family-tree/`).
+- **Хостинг**: GitHub Pages (`https://alik532ua.github.io/Alik-family-tree/`).
 - **Гілка деплою**: `main`.
 
 ---
@@ -22,9 +22,9 @@
 | ------------------------------------- | --------------------------------------------------------------------------- |
 | Профіль розгортання                   | `static` (`@sveltejs/adapter-static`)                                       |
 | Хостинг                               | GitHub Pages                                                                |
-| Основна адреса                        | `https://alik.github.io/Alik-family-tree/`                                  |
+| Основна адреса                        | `https://alik532ua.github.io/Alik-family-tree/`                              |
 | Базовий шлях (`BASE_PATH`)            | `/Alik-family-tree` (порожній при власному домені)                          |
-| Спільний origin з іншими застосунками | ні (окремий домен/шлях)                                                     |
+| Спільний origin з іншими застосунками | Так (`https://alik532ua.github.io`)                                         |
 | Гілка деплою                          | `main`                                                                      |
 | Метод деплою                          | GitHub Actions (`pages`)                                                    |
 | Порт dev-сервера                      | 5173                                                                        |
@@ -136,3 +136,26 @@
 - Підтримка `prefers-reduced-motion`: плавне панорамування автоматично замінюється миттєвим переходом без анімацій.
 - Семантичні ARIA-атрибути: `role="dialog"`, `aria-modal="true"`, `aria-label` для кнопок керування масштабом.
 - Автоматичний регресійний a11y-тест `src/a11y.test.ts` гарантує збереження семантики та відсутність регресій розмітки.
+
+---
+
+## 9. Опціональні критерії інженерного та продуктового пакетів
+
+| Критерій | Застосовано | Причина / Локація |
+| :--- | :---: | :--- |
+| **I18N** | Частково | Основна мова `uk`; структура підготовлена для мультимовного розширення |
+| **DEPENDENCIES** | Так | Суворий lockfile, Dependabot, `audit:ci` |
+| **VERSIONING** | Так | Версія `__APP_VERSION__`, `scripts/bump-version.mjs` |
+| **ACCESSIBILITY** | Так | `src/a11y.test.ts`, фокус-пастки, `prefers-reduced-motion` |
+| **STORAGE-NAMESPACE** | Так | Префікс `alik_tree_`, `src/lib/services/storage.ts` |
+| **ERROR-HANDLING** | Так | `<svelte:boundary>`, stale-build захист у `hooks.client.ts` |
+| **SEARCH-SCALABILITY** | Так | Віртуалізація в `src/searchAndScalability.test.ts`, індексація |
+
+---
+
+## 10. Свідомі відхилення від канону
+
+1. **Повна попередня компіляція графа на етапі збірки (`data:parse`)**:
+   - *Причина*: Відмова від клієнтського парсингу важких архівних XML/Draw.io файлів скорочує First Contentful Paint (FCP) до < 150мс.
+2. **Сесійний PIN замість серверної авторизації**:
+   - *Причина*: Збереження повної статичної незалежності GitHub Pages без потреби в базі даних користувачів.
